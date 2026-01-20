@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тренажер спряжения глаголов</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Тренажер спряжения глаголов</h1>
+        </header>
+
+        <main>
+            <section class="settings" id="settingsSection">
+                <h2>Настройки</h2>
+                <div class="time-settings">
+                    <label>Времена:</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="time" value="present" checked> Настоящее</label>
+                        <label><input type="checkbox" name="time" value="past"> Прошедшее</label>
+                        <label><input type="checkbox" name="time" value="future"> Будущее</label>
+                    </div>
+                </div>
+                
+                <div class="pronoun-settings">
+                    <label>Лица:</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="pronoun" value="я" checked> я</label>
+                        <label><input type="checkbox" name="pronoun" value="ты"> ты</label>
+                        <label><input type="checkbox" name="pronoun" value="он/она"> он/она</label>
+                        <label><input type="checkbox" name="pronoun" value="мы"> мы</label>
+                        <label><input type="checkbox" name="pronoun" value="вы"> вы</label>
+                        <label><input type="checkbox" name="pronoun" value="они"> они</label>
+                    </div>
+                </div>
+                
+                <div class="settings-buttons">
+                    <button id="startBtn" class="btn">Начать тренировку</button>
+                </div>
+            </section>
+
+            <section class="exercise" id="exerciseSection" style="display: none;">
+                <div class="stats">
+                    <span>Правильно: <span id="correctCount">0</span></span>
+                    <span>Всего: <span id="totalCount">0</span></span>
+                    <span>Ошибок: <span id="wrongCount">0</span></span>
+                </div>
+                
+                <div class="current-task">
+                    <p>Спрягите глагол:</p>
+                    <h2 id="currentVerb">говорить</h2>
+                    <div class="task-details">
+                        <p>Время: <span id="currentTime">настоящее</span></p>
+                        <p>Лицо: <span id="currentPronoun">я</span></p>
+                    </div>
+                </div>
+                
+                <div class="answer-section">
+                    <input type="text" id="answerInput" placeholder="Введите спряжение...">
+                    <div class="buttons">
+                        <button id="skipBtn" class="btn btn-secondary">Пропустить</button>
+                        <button id="showAnswerBtn" class="btn btn-secondary">Показать ответ</button>
+                        <button id="checkBtn" class="btn btn-primary">Проверить</button>
+                    </div>
+                </div>
+                
+                <div class="feedback-container">
+                    <div class="feedback" id="feedback"></div>
+                </div>
+                
+                <div class="navigation-buttons">
+                    <button id="reviewBtn" class="btn btn-warning" style="display: none;">
+                        Повторить ошибки (<span id="reviewCount">0</span>)
+                    </button>
+                    <button id="backBtn" class="btn btn-back">Вернуться к настройкам</button>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <!-- Сначала загружаем данные, потом основной скрипт -->
+    <script src="verbs-data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

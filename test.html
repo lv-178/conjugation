@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+    // Тест 1: Проверяем существование файла
+    fetch('data/verbs.json')
+        .then(r => {
+            console.log('Статус:', r.status, r.statusText);
+            if (r.ok) return r.text();
+            throw new Error('Файл не найден');
+        })
+        .then(text => {
+            console.log('Файл найден, размер:', text.length, 'символов');
+            console.log('Первые 500 символов:', text.substring(0, 500));
+        })
+        .catch(e => {
+            console.error('Ошибка:', e.message);
+            console.log('Протокол страницы:', window.location.protocol);
+            console.log('URL файла:', new URL('data/verbs.json', window.location.href).href);
+        });
+</script>
+</body>
+</html>
