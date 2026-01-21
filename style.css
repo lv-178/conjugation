@@ -25,10 +25,10 @@ body {
     max-width: 800px;
     max-height: 90vh;
     background: white;
-    border-radius: 8px; /* Более тонкие скругления */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Более легкая тень */
-    border: 1px solid #d1d9e6; /* Тонкая рамка */
-    padding: 20px; /* Меньше padding */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border: 1px solid #d1d9e6;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -53,7 +53,7 @@ h1 {
     margin-bottom: 15px;
     flex: 1;
     overflow-y: auto;
-    border: 1px solid #e9ecef; /* Тонкая рамка у настроек */
+    border: 1px solid #e9ecef;
 }
 
 .settings h2 {
@@ -184,7 +184,7 @@ h1 {
     cursor: pointer;
     font-size: 13px;
     font-weight: 600;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
     flex: 1;
     min-height: 40px;
     display: flex;
@@ -193,7 +193,6 @@ h1 {
 }
 
 .btn:hover {
-    transform: translateY(-1px);
 }
 
 #startBtn {
@@ -345,5 +344,25 @@ h1 {
     .navigation-buttons {
         flex-direction: column;
         gap: 8px;
+    }
+    
+    /* Адаптивность для чекбоксов на мобильных */
+    @media (max-width: 600px) {
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+        
+        .checkbox-group label {
+            font-size: 0.85em;
+            padding: 6px 4px;
+        }
+    }
+    
+    @media (max-width: 400px) {
+        .checkbox-group {
+            grid-template-columns: 1fr;
+        }
     }
 }

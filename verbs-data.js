@@ -1,134 +1,235 @@
-// verbs-data.js - База глаголов
 window.verbsData = {
-    "говорить": {
-        "present": {
-            "я": "говорю",
-            "ты": "говоришь",
-            "он/она": "говорит",
-            "мы": "говорим",
-            "вы": "говорите",
-            "они": "говорят"
+    "estar": {
+        "presente": {
+            "yo": "estoy",
+            "tú": "estás",
+            "él/ella/usted": "está",
+            "nosotros/nosotras": "estamos",
+            "vosotros/vosotras": "estáis",
+            "ellos/ellas/ustedes": "están"
         },
-        "past": {
-            "я": "говорил/говорила",
-            "ты": "говорил/говорила",
-            "он/она": "говорил/говорила",
-            "мы": "говорили",
-            "вы": "говорили",
-            "они": "говорили"
+        "pretérito": {
+            "yo": "estuve",
+            "tú": "estuviste",
+            "él/ella/usted": "estuvo",
+            "nosotros/nosotras": "estuvimos",
+            "vosotros/vosotras": "estuvisteis",
+            "ellos/ellas/ustedes": "estuvieron"
         },
-        "future": {
-            "я": "буду говорить",
-            "ты": "будешь говорить",
-            "он/она": "будет говорить",
-            "мы": "будем говорить",
-            "вы": "будете говорить",
-            "они": "будут говорить"
+        "imperfecto": {
+            "yo": "estaba",
+            "tú": "estabas",
+            "él/ella/usted": "estaba",
+            "nosotros/nosotras": "estábamos",
+            "vosotros/vosotras": "estabais",
+            "ellos/ellas/ustedes": "estaban"
+        },
+        "futuro": {
+            "yo": "estaré",
+            "tú": "estarás",
+            "él/ella/usted": "estará",
+            "nosotros/nosotras": "estaremos",
+            "vosotros/vosotras": "estaréis",
+            "ellos/ellas/ustedes": "estarán"
+        },
+        "condicional": {
+            "yo": "estaría",
+            "tú": "estarías",
+            "él/ella/usted": "estaría",
+            "nosotros/nosotras": "estaríamos",
+            "vosotros/vosotras": "estaríais",
+            "ellos/ellas/ustedes": "estarían"
+        },
+        "presente_subjuntivo": {
+            "yo": "esté",
+            "tú": "estés",
+            "él/ella/usted": "esté",
+            "nosotros/nosotras": "estemos",
+            "vosotros/vosotras": "estéis",
+            "ellos/ellas/ustedes": "estén"
+        },
+        "imperfecto_subjuntivo": {
+            "yo": "estuviera/estuviese",
+            "tú": "estuvieras/estuvieses",
+            "él/ella/usted": "estuviera/estuviese",
+            "nosotros/nosotras": "estuviéramos/estuviésemos",
+            "vosotros/vosotras": "estuvierais/estuvieseis",
+            "ellos/ellas/ustedes": "estuvieran/estuviesen"
         }
     },
-    "читать": {
-        "present": {
-            "я": "читаю",
-            "ты": "читаешь",
-            "он/она": "читает",
-            "мы": "читаем",
-            "вы": "читаете",
-            "они": "читают"
+    "ir": {
+        "presente": {
+            "yo": "voy",
+            "tú": "vas",
+            "él/ella/usted": "va",
+            "nosotros/nosotras": "vamos",
+            "vosotros/vosotras": "vais",
+            "ellos/ellas/ustedes": "van"
         },
-        "past": {
-            "я": "читал/читала",
-            "ты": "читал/читала",
-            "он/она": "читал/читала",
-            "мы": "читали",
-            "вы": "читали",
-            "они": "читали"
+        "pretérito": {
+            "yo": "fui",
+            "tú": "fuiste",
+            "él/ella/usted": "fue",
+            "nosotros/nosotras": "fuimos",
+            "vosotros/vosotras": "fuisteis",
+            "ellos/ellas/ustedes": "fueron"
         },
-        "future": {
-            "я": "буду читать",
-            "ты": "будешь читать",
-            "он/она": "будет читать",
-            "мы": "будем читать",
-            "вы": "будете читать",
-            "они": "будут читать"
+        "imperfecto": {
+            "yo": "iba",
+            "tú": "ibas",
+            "él/ella/usted": "iba",
+            "nosotros/nosotras": "íbamos",
+            "vosotros/vosotras": "ibais",
+            "ellos/ellas/ustedes": "iban"
+        },
+        "futuro": {
+            "yo": "iré",
+            "tú": "irás",
+            "él/ella/usted": "irá",
+            "nosotros/nosotras": "iremos",
+            "vosotros/vosotras": "iréis",
+            "ellos/ellas/ustedes": "irán"
+        },
+        "condicional": {
+            "yo": "iría",
+            "tú": "irías",
+            "él/ella/usted": "iría",
+            "nosotros/nosotras": "iríamos",
+            "vosotros/vosotras": "iríais",
+            "ellos/ellas/ustedes": "irían"
+        },
+        "presente_subjuntivo": {
+            "yo": "vaya",
+            "tú": "vayas",
+            "él/ella/usted": "vaya",
+            "nosotros/nosotras": "vayamos",
+            "vosotros/vosotras": "vayáis",
+            "ellos/ellas/ustedes": "vayan"
+        },
+        "imperfecto_subjuntivo": {
+            "yo": "fuera/fuese",
+            "tú": "fueras/fueses",
+            "él/ella/usted": "fuera/fuese",
+            "nosotros/nosotras": "fuéramos/fuésemos",
+            "vosotros/vosotras": "fuerais/fueseis",
+            "ellos/ellas/ustedes": "fueran/fuesen"
         }
     },
-    "писать": {
-        "present": {
-            "я": "пишу",
-            "ты": "пишешь",
-            "он/она": "пишет",
-            "мы": "пишем",
-            "вы": "пишете",
-            "они": "пишут"
+    "tomar": {
+        "presente": {
+            "yo": "tomo",
+            "tú": "tomas",
+            "él/ella/usted": "toma",
+            "nosotros/nosotras": "tomamos",
+            "vosotros/vosotras": "tomáis",
+            "ellos/ellas/ustedes": "toman"
         },
-        "past": {
-            "я": "писал/писала",
-            "ты": "писал/писала",
-            "он/она": "писал/писала",
-            "мы": "писали",
-            "вы": "писали",
-            "они": "писали"
+        "pretérito": {
+            "yo": "tomé",
+            "tú": "tomaste",
+            "él/ella/usted": "tomó",
+            "nosotros/nosotras": "tomamos",
+            "vosotros/vosotras": "tomasteis",
+            "ellos/ellas/ustedes": "tomaron"
         },
-        "future": {
-            "я": "буду писать",
-            "ты": "будешь писать",
-            "он/она": "будет писать",
-            "мы": "будем писать",
-            "вы": "будете писать",
-            "они": "будут писать"
+        "imperfecto": {
+            "yo": "tomaba",
+            "tú": "tomabas",
+            "él/ella/usted": "tomaba",
+            "nosotros/nosotras": "tomábamos",
+            "vosotros/vosotras": "tomabais",
+            "ellos/ellas/ustedes": "tomaban"
+        },
+        "futuro": {
+            "yo": "tomaré",
+            "tú": "tomarás",
+            "él/ella/usted": "tomará",
+            "nosotros/nosotras": "tomaremos",
+            "vosotros/vosotras": "tomaréis",
+            "ellos/ellas/ustedes": "tomarán"
+        },
+        "condicional": {
+            "yo": "tomaría",
+            "tú": "tomarías",
+            "él/ella/usted": "tomaría",
+            "nosotros/nosotras": "tomaríamos",
+            "vosotros/vosotras": "tomaríais",
+            "ellos/ellas/ustedes": "tomarían"
+        },
+        "presente_subjuntivo": {
+            "yo": "tome",
+            "tú": "tomes",
+            "él/ella/usted": "tome",
+            "nosotros/nosotras": "tomemos",
+            "vosotros/vosotras": "toméis",
+            "ellos/ellas/ustedes": "tomen"
+        },
+        "imperfecto_subjuntivo": {
+            "yo": "tomara/tomase",
+            "tú": "tomaras/tomases",
+            "él/ella/usted": "tomara/tomase",
+            "nosotros/nosotras": "tomáramos/tomásemos",
+            "vosotros/vosotras": "tomarais/tomaseis",
+            "ellos/ellas/ustedes": "tomaran/tomasen"
         }
     },
-    "делать": {
-        "present": {
-            "я": "делаю",
-            "ты": "делаешь",
-            "он/она": "делает",
-            "мы": "делаем",
-            "вы": "делаете",
-            "они": "делают"
+    "decir": {
+        "presente": {
+            "yo": "digo",
+            "tú": "dices",
+            "él/ella/usted": "dice",
+            "nosotros/nosotras": "decimos",
+            "vosotros/vosotras": "decís",
+            "ellos/ellas/ustedes": "dicen"
         },
-        "past": {
-            "я": "делал/делала",
-            "ты": "делал/делала",
-            "он/она": "делал/делала",
-            "мы": "делали",
-            "вы": "делали",
-            "они": "делали"
+        "pretérito": {
+            "yo": "dije",
+            "tú": "dijiste",
+            "él/ella/usted": "dijo",
+            "nosotros/nosotras": "dijimos",
+            "vosotros/vosotras": "dijisteis",
+            "ellos/ellas/ustedes": "dijeron"
         },
-        "future": {
-            "я": "буду делать",
-            "ты": "будешь делать",
-            "он/она": "будет делать",
-            "мы": "будем делать",
-            "вы": "будете делать",
-            "они": "будут делать"
-        }
-    },
-    "идти": {
-        "present": {
-            "я": "иду",
-            "ты": "идешь",
-            "он/она": "идет",
-            "мы": "идем",
-            "вы": "идете",
-            "они": "идут"
+        "imperfecto": {
+            "yo": "decía",
+            "tú": "decías",
+            "él/ella/usted": "decía",
+            "nosotros/nosotras": "decíamos",
+            "vosotros/vosotras": "decíais",
+            "ellos/ellas/ustedes": "decían"
         },
-        "past": {
-            "я": "шел/шла",
-            "ты": "шел/шла",
-            "он/она": "шел/шла",
-            "мы": "шли",
-            "вы": "шли",
-            "они": "шли"
+        "futuro": {
+            "yo": "diré",
+            "tú": "dirás",
+            "él/ella/usted": "dirá",
+            "nosotros/nosotras": "diremos",
+            "vosotros/vosotras": "diréis",
+            "ellos/ellas/ustedes": "dirán"
         },
-        "future": {
-            "я": "буду идти",
-            " ты": "будешь идти",
-            "он/она": "будет идти",
-            "мы": "будем идти",
-            "вы": "будете идти",
-            "они": "будут идти"
+        "condicional": {
+            "yo": "diría",
+            "tú": "dirías",
+            "él/ella/usted": "diría",
+            "nosotros/nosotras": "diríamos",
+            "vosotros/vosotras": "diríais",
+            "ellos/ellas/ustedes": "dirían"
+        },
+        "presente_subjuntivo": {
+            "yo": "diga",
+            "tú": "digas",
+            "él/ella/usted": "diga",
+            "nosotros/nosotras": "digamos",
+            "vosotros/vosotras": "digáis",
+            "ellos/ellas/ustedes": "digan"
+        },
+        "imperfecto_subjuntivo": {
+            "yo": "dijera/dijese",
+            "tú": "dijeras/dijeses",
+            "él/ella/usted": "dijera/dijese",
+            "nosotros/nosotras": "dijéramos/dijésemos",
+            "vosotros/vosotras": "dijerais/dijeseis",
+            "ellos/ellas/ustedes": "dijeran/dijesen"
         }
     }
-    // Добавляйте новые глаголы здесь
+    // Añade nuevos verbos aquí
 };

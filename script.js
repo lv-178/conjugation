@@ -1,28 +1,25 @@
 // script.js - Основная логика приложения
 class VerbTrainer {
     constructor() {
-        // Берем глаголы из глобальной переменной, созданной в verbs-data.js
         this.verbs = window.verbsData || {};
         
-        // Проверяем, что глаголы загрузились
         if (Object.keys(this.verbs).length === 0) {
-            console.error('Глаголы не загружены! Проверьте файл verbs-data.js');
-            alert('Ошибка: глаголы не загружены. Проверьте консоль браузера (F12).');
+            console.error('Данные не загрузились! Проверьте файл verbs-data.js');
+            alert('Ошибка: данные не загрузились! Проверьте файл verbs-data.js');
         } else {
             console.log(`Загружено ${Object.keys(this.verbs).length} глаголов`);
         }
         
         this.currentExercise = null;
         this.stats = { 
-            correct: 0, 
-            total: 0, 
+            correct: 0,
+            total: 0,
             wrong: 0
         };
-        this.selectedTimes = ['present'];
-        this.selectedPronouns = ['я'];
+        this.selectedTimes = ['presente'];
+        this.selectedPronouns = ['yo'];
         this.wrongAnswers = [];
         this.isReviewMode = false;
-        this.reviewExercises = [];
         
         this.initElements();
         this.bindEvents();
@@ -115,14 +112,13 @@ class VerbTrainer {
     }
     
     startTraining() {
-        // Проверяем, что глаголы загружены
         if (Object.keys(this.verbs).length === 0) {
-            alert('Глаголы не загружены. Проверьте файл verbs-data.js');
+            alert('Данные не загрузились. Проверьте файл verbs-data.js');
             return;
         }
         
         if (this.selectedTimes.length === 0 || this.selectedPronouns.length === 0) {
-            alert('Выберите хотя бы одно время и одно лицо!');
+            alert('Выберите хотя бы одно время и одно местоимение!');
             return;
         }
         
@@ -149,7 +145,6 @@ class VerbTrainer {
         }
         
         this.isReviewMode = true;
-        this.reviewExercises = [...filteredWrong];
         this.nextReviewExercise();
     }
     
@@ -193,24 +188,26 @@ class VerbTrainer {
     }
     
     nextReviewExercise() {
-        if (this.reviewExercises.length === 0) {
+        const filteredWrong = this.wrongAnswers.filter(wrong => 
+            this.selectedTimes.includes(wrong.time) && 
+            this.selectedPronouns.includes(wrong.pronoun)
+        );
+        
+        if (filteredWrong.length === 0) {
             this.endReview();
             return;
         }
         
-        const randomIndex = Math.floor(Math.random() * this.reviewExercises.length);
-        const wrongAnswer = this.reviewExercises[randomIndex];
+        const randomIndex = Math.floor(Math.random() * filteredWrong.length);
+        const wrongAnswer = filteredWrong[randomIndex];
         this.currentExercise = this.getExerciseFromWrong(wrongAnswer);
-        
-        this.reviewExercises.splice(randomIndex, 1);
-        this.updateReviewButton();
         
         this.displayExercise();
     }
     
     displayExercise() {
         this.currentVerbElem.textContent = this.currentExercise.verb;
-        this.currentTimeElem.textContent = this.getTimeName(this.currentExercise.time);
+        this.currentTimeElem.textContent = this.currentExercise.time;
         this.currentPronounElem.textContent = this.currentExercise.pronoun;
         this.answerInput.value = '';
         this.feedbackElem.className = 'feedback';
@@ -225,15 +222,6 @@ class VerbTrainer {
         this.isReviewMode = false;
         alert('Повторение ошибок завершено!');
         this.returnToSettings();
-    }
-    
-    getTimeName(timeKey) {
-        const names = {
-            'present': 'настоящее',
-            'past': 'прошедшее',
-            'future': 'будущее'
-        };
-        return names[timeKey];
     }
     
     checkAnswer() {
@@ -251,24 +239,22 @@ class VerbTrainer {
         
         this.stats.total++;
         
-        const correctAnswers = correctAnswer.split('/').map(a => a.trim());
+        // Обработка альтернативных ответов, разделенных /
+        const correctAnswers = correctAnswer.split('/').map(a => a.trim().toLowerCase());
         
-        if (correctAnswers.some(answer => userAnswer === answer.toLowerCase())) {
+        if (correctAnswers.some(answer => userAnswer === answer)) {
             this.feedbackElem.innerHTML = '';
             this.feedbackElem.className = 'feedback correct';
             this.stats.correct++;
             
-            // Удаляем из wrongAnswers только в режиме повторения
             if (this.isReviewMode) {
                 this.removeFromWrongAnswers(this.currentExercise);
             }
-            // В обычном режиме НЕ удаляем даже при правильном ответе
         } else {
             this.feedbackElem.innerHTML = correctAnswer;
             this.feedbackElem.className = 'feedback incorrect';
             this.stats.wrong++;
             
-            // Добавляем в wrongAnswers при ошибке (в обоих режимах)
             this.addToWrongAnswers(this.currentExercise);
         }
         
@@ -314,7 +300,6 @@ class VerbTrainer {
         this.waitingForNext = true;
         document.getElementById('checkBtn').textContent = 'Далее';
         
-        // При показе ответа всегда добавляем в wrongAnswers
         this.addToWrongAnswers(this.currentExercise);
     }
     
@@ -325,9 +310,14 @@ class VerbTrainer {
     }
     
     returnToSettings() {
-        // ОЧИСТКА wrongAnswers при возврате в настройки
+        this.stats = { 
+            correct: 0, 
+            total: 0, 
+            wrong: 0
+        };
+        this.updateStats();
+        
         this.wrongAnswers = [];
-        this.reviewExercises = [];
         this.isReviewMode = false;
         
         this.settingsSection.style.display = 'block';
@@ -336,10 +326,11 @@ class VerbTrainer {
         this.reviewBtn.style.display = 'none';
         this.reviewCountElem.textContent = '0';
         
-        this.saveWrongAnswers();
+        this.saveStats();
     }
     
     saveStats() {
+        // Сохранение данных в localStorage
         const data = {
             stats: this.stats,
             wrongAnswers: this.wrongAnswers,
@@ -354,8 +345,6 @@ class VerbTrainer {
         if (saved) {
             try {
                 const data = JSON.parse(saved);
-                this.stats = data.stats || this.stats;
-                this.wrongAnswers = data.wrongAnswers || [];
                 this.selectedTimes = data.selectedTimes || this.selectedTimes;
                 this.selectedPronouns = data.selectedPronouns || this.selectedPronouns;
                 
@@ -380,7 +369,6 @@ class VerbTrainer {
     }
 }
 
-// Инициализация при загрузке страницы
 document.addEventListener('DOMContentLoaded', () => {
     const trainer = new VerbTrainer();
 });

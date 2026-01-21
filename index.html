@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,23 +16,27 @@
             <section class="settings" id="settingsSection">
                 <h2>Настройки</h2>
                 <div class="time-settings">
-                    <label>Времена:</label>
+                    <label>Tiempos:</label>
                     <div class="checkbox-group">
-                        <label><input type="checkbox" name="time" value="present" checked> Настоящее</label>
-                        <label><input type="checkbox" name="time" value="past"> Прошедшее</label>
-                        <label><input type="checkbox" name="time" value="future"> Будущее</label>
+                        <label><input type="checkbox" name="time" value="presente" checked> Presente</label>
+                        <label><input type="checkbox" name="time" value="pretérito"> Pretérito</label>
+                        <label><input type="checkbox" name="time" value="imperfecto"> Imperfecto</label>
+                        <label><input type="checkbox" name="time" value="futuro"> Futuro</label>
+                        <label><input type="checkbox" name="time" value="condicional"> Condicional</label>
+                        <label><input type="checkbox" name="time" value="presente_subjuntivo"> Presente Subjuntivo</label>
+                        <label><input type="checkbox" name="time" value="imperfecto_subjuntivo"> Imperfecto Subjuntivo</label>
                     </div>
                 </div>
                 
                 <div class="pronoun-settings">
-                    <label>Лица:</label>
+                    <label>Pronombres:</label>
                     <div class="checkbox-group">
-                        <label><input type="checkbox" name="pronoun" value="я" checked> я</label>
-                        <label><input type="checkbox" name="pronoun" value="ты"> ты</label>
-                        <label><input type="checkbox" name="pronoun" value="он/она"> он/она</label>
-                        <label><input type="checkbox" name="pronoun" value="мы"> мы</label>
-                        <label><input type="checkbox" name="pronoun" value="вы"> вы</label>
-                        <label><input type="checkbox" name="pronoun" value="они"> они</label>
+                        <label><input type="checkbox" name="pronoun" value="yo" checked> yo</label>
+                        <label><input type="checkbox" name="pronoun" value="tú"> tú</label>
+                        <label><input type="checkbox" name="pronoun" value="él/ella/usted"> él/ella/usted</label>
+                        <label><input type="checkbox" name="pronoun" value="nosotros/nosotras"> nosotros/nosotras</label>
+                        <label><input type="checkbox" name="pronoun" value="vosotros/vosotras"> vosotros/vosotras</label>
+                        <label><input type="checkbox" name="pronoun" value="ellos/ellas/ustedes"> ellos/ellas/ustedes</label>
                     </div>
                 </div>
                 
@@ -49,16 +53,16 @@
                 </div>
                 
                 <div class="current-task">
-                    <p>Спрягите глагол:</p>
-                    <h2 id="currentVerb">говорить</h2>
+                    <p>Conjuga el verbo:</p>
+                    <h2 id="currentVerb">estar</h2>
                     <div class="task-details">
-                        <p>Время: <span id="currentTime">настоящее</span></p>
-                        <p>Лицо: <span id="currentPronoun">я</span></p>
+                        <p>Tiempo: <span id="currentTime">presente</span></p>
+                        <p>Pronombre: <span id="currentPronoun">yo</span></p>
                     </div>
                 </div>
                 
                 <div class="answer-section">
-                    <input type="text" id="answerInput" placeholder="Введите спряжение...">
+                    <input type="text" id="answerInput" placeholder="Escribe la conjugación...">
                     <div class="buttons">
                         <button id="skipBtn" class="btn btn-secondary">Пропустить</button>
                         <button id="showAnswerBtn" class="btn btn-secondary">Показать ответ</button>
@@ -80,7 +84,6 @@
         </main>
     </div>
     
-    <!-- Сначала загружаем данные, потом основной скрипт -->
     <script src="verbs-data.js"></script>
     <script src="script.js"></script>
 </body>
