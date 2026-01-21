@@ -366,3 +366,22 @@ h1 {
         }
     }
 }
+
+.group-settings {
+    margin-bottom: 15px;
+}
+
+.group-settings label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #495057;
+    font-size: 0.9em;
+}
+
+/* Для лучшего отображения групп на мобильных */
+@media (max-width: 600px) {
+    .checkbox-group[data-group="group"] {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
