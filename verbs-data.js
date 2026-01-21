@@ -111,11 +111,25 @@ window.verbsData = {
         "presente_subjuntivo": {"yo": "vea", "tú": "veas", "él/ella/usted": "vea", "nosotros/nosotras": "veamos", "vosotros/vosotras": "veáis", "ellos/ellas/ustedes": "vean"},
         "imperfecto_subjuntivo": {"yo": "viera/viese", "tú": "vieras/vieses", "él/ella/usted": "viera/viese", "nosotros/nosotras": "viéramos/viésemos", "vosotros/vosotras": "vierais/vieseis", "ellos/ellas/ustedes": "vieran/viesen"}
     },
+
+"haber": {
+        "group": "irregular",
+        "level": 1,
+        "frequency": 9,
+        "translation": "иметь (вспомогательный глагол)",
+        "presente": {"yo": "he", "tú": "has", "él/ella/usted": "ha", "nosotros/nosotras": "hemos", "vosotros/vosotras": "habéis", "ellos/ellas/ustedes": "han"},
+        "pretérito": {"yo": "hube", "tú": "hubiste", "él/ella/usted": "hubo", "nosotros/nosotras": "hubimos", "vosotros/vosotras": "hubisteis", "ellos/ellas/ustedes": "hubieron"},
+        "imperfecto": {"yo": "había", "tú": "habías", "él/ella/usted": "había", "nosotros/nosotras": "habíamos", "vosotros/vosotras": "habíais", "ellos/ellas/ustedes": "habían"},
+        "futuro": {"yo": "habré", "tú": "habrás", "él/ella/usted": "habrá", "nosotros/nosotras": "habremos", "vosotros/vosotras": "habréis", "ellos/ellas/ustedes": "habrán"},
+        "condicional": {"yo": "habría", "tú": "habrías", "él/ella/usted": "habría", "nosotros/nosotras": "habríamos", "vosotros/vosotras": "habríais", "ellos/ellas/ustedes": "habrían"},
+        "presente_subjuntivo": {"yo": "haya", "tú": "hayas", "él/ella/usted": "haya", "nosotros/nosotras": "hayamos", "vosotros/vosotras": "hayáis", "ellos/ellas/ustedes": "hayan"},
+        "imperfecto_subjuntivo": {"yo": "hubiera/hubiese", "tú": "hubieras/hubieses", "él/ella/usted": "hubiera/hubiese", "nosotros/nosotras": "hubiéramos/hubiésemos", "vosotros/vosotras": "hubierais/hubieseis", "ellos/ellas/ustedes": "hubieran/hubiesen"}
+    },
     
     "hablar": {
         "group": "ar",
         "level": 1,
-        "frequency": 9,
+        "frequency": 10,
         "translation": "говорить",
         "presente": {"yo": "hablo", "tú": "hablas", "él/ella/usted": "habla", "nosotros/nosotras": "hablamos", "vosotros/vosotras": "habláis", "ellos/ellas/ustedes": "hablan"},
         "pretérito": {"yo": "hablé", "tú": "hablaste", "él/ella/usted": "habló", "nosotros/nosotras": "hablamos", "vosotros/vosotras": "hablasteis", "ellos/ellas/ustedes": "hablaron"},
@@ -129,7 +143,7 @@ window.verbsData = {
     "dar": {
         "group": "irregular",
         "level": 1,
-        "frequency": 10,
+        "frequency": 11,
         "translation": "давать",
         "presente": {"yo": "doy", "tú": "das", "él/ella/usted": "da", "nosotros/nosotras": "damos", "vosotros/vosotras": "dáis", "ellos/ellas/ustedes": "dan"},
         "pretérito": {"yo": "di", "tú": "diste", "él/ella/usted": "dio", "nosotros/nosotras": "dimos", "vosotros/vosotras": "disteis", "ellos/ellas/ustedes": "dieron"},
@@ -143,7 +157,7 @@ window.verbsData = {
     "saber": {
         "group": "irregular",
         "level": 1,
-        "frequency": 11,
+        "frequency": 12,
         "translation": "знать (информацию), уметь",
         "presente": {"yo": "sé", "tú": "sabes", "él/ella/usted": "sabe", "nosotros/nosotras": "sabemos", "vosotros/vosotras": "sabéis", "ellos/ellas/ustedes": "saben"},
         "pretérito": {"yo": "supe", "tú": "supiste", "él/ella/usted": "supo", "nosotros/nosotras": "supimos", "vosotros/vosotras": "supisteis", "ellos/ellas/ustedes": "supieron"},
@@ -157,7 +171,7 @@ window.verbsData = {
     "querer": {
         "group": "irregular",
         "level": 1,
-        "frequency": 12,
+        "frequency": 13,
         "translation": "хотеть, любить",
         "presente": {"yo": "quiero", "tú": "quieres", "él/ella/usted": "quiere", "nosotros/nosotras": "queremos", "vosotros/vosotras": "queréis", "ellos/ellas/ustedes": "quieren"},
         "pretérito": {"yo": "quise", "tú": "quisiste", "él/ella/usted": "quiso", "nosotros/nosotras": "quisimos", "vosotros/vosotras": "quisisteis", "ellos/ellas/ustedes": "quisieron"},
@@ -171,7 +185,7 @@ window.verbsData = {
     "llegar": {
         "group": "ar",
         "level": 1,
-        "frequency": 13,
+        "frequency": 14,
         "translation": "прибывать, приходить",
         "presente": {"yo": "llego", "tú": "llegas", "él/ella/usted": "llega", "nosotros/nosotras": "llegamos", "vosotros/vosotras": "llegáis", "ellos/ellas/ustedes": "llegan"},
         "pretérito": {"yo": "llegué", "tú": "llegaste", "él/ella/usted": "llegó", "nosotros/nosotras": "llegamos", "vosotros/vosotras": "llegasteis", "ellos/ellas/ustedes": "llegaron"},
@@ -185,7 +199,7 @@ window.verbsData = {
     "venir": {
         "group": "irregular",
         "level": 1,
-        "frequency": 14,
+        "frequency": 15,
         "translation": "приходить",
         "presente": {"yo": "vengo", "tú": "vienes", "él/ella/usted": "viene", "nosotros/nosotras": "venimos", "vosotros/vosotras": "venís", "ellos/ellas/ustedes": "vienen"},
         "pretérito": {"yo": "vine", "tú": "viniste", "él/ella/usted": "vino", "nosotros/nosotras": "vinimos", "vosotros/vosotras": "vinisteis", "ellos/ellas/ustedes": "vinieron"},
@@ -199,7 +213,7 @@ window.verbsData = {
     "poner": {
         "group": "irregular",
         "level": 1,
-        "frequency": 15,
+        "frequency": 16,
         "translation": "ставить, класть",
         "presente": {"yo": "pongo", "tú": "pones", "él/ella/usted": "pone", "nosotros/nosotras": "ponemos", "vosotros/vosotras": "ponéis", "ellos/ellas/ustedes": "ponen"},
         "pretérito": {"yo": "puse", "tú": "pusiste", "él/ella/usted": "puso", "nosotros/nosotras": "pusimos", "vosotros/vosotras": "pusisteis", "ellos/ellas/ustedes": "pusieron"},
@@ -213,7 +227,7 @@ window.verbsData = {
     "pensar": {
         "group": "ar",
         "level": 1,
-        "frequency": 16,
+        "frequency": 17,
         "translation": "думать",
         "presente": {"yo": "pienso", "tú": "piensas", "él/ella/usted": "piensa", "nosotros/nosotras": "pensamos", "vosotros/vosotras": "pensáis", "ellos/ellas/ustedes": "piensan"},
         "pretérito": {"yo": "pensé", "tú": "pensaste", "él/ella/usted": "pensó", "nosotros/nosotras": "pensamos", "vosotros/vosotras": "pensasteis", "ellos/ellas/ustedes": "pensaron"},
@@ -227,7 +241,7 @@ window.verbsData = {
     "salir": {
         "group": "irregular",
         "level": 1,
-        "frequency": 17,
+        "frequency": 18,
         "translation": "выходить, уходить",
         "presente": {"yo": "salgo", "tú": "sales", "él/ella/usted": "sale", "nosotros/nosotras": "salimos", "vosotros/vosotras": "salís", "ellos/ellas/ustedes": "salen"},
         "pretérito": {"yo": "salí", "tú": "saliste", "él/ella/usted": "salió", "nosotros/nosotras": "salimos", "vosotros/vosotras": "salisteis", "ellos/ellas/ustedes": "salieron"},
@@ -241,7 +255,7 @@ window.verbsData = {
     "comer": {
         "group": "er",
         "level": 1,
-        "frequency": 18,
+        "frequency": 19,
         "translation": "есть, кушать",
         "presente": {"yo": "como", "tú": "comes", "él/ella/usted": "come", "nosotros/nosotras": "comemos", "vosotros/vosotras": "coméis", "ellos/ellas/ustedes": "comen"},
         "pretérito": {"yo": "comí", "tú": "comiste", "él/ella/usted": "comió", "nosotros/nosotras": "comimos", "vosotros/vosotras": "comisteis", "ellos/ellas/ustedes": "comieron"},
@@ -255,7 +269,7 @@ window.verbsData = {
     "tomar": {
         "group": "ar",
         "level": 1,
-        "frequency": 19,
+        "frequency": 20,
         "translation": "брать, принимать",
         "presente": {"yo": "tomo", "tú": "tomas", "él/ella/usted": "toma", "nosotros/nosotras": "tomamos", "vosotros/vosotras": "tomáis", "ellos/ellas/ustedes": "toman"},
         "pretérito": {"yo": "tomé", "tú": "tomaste", "él/ella/usted": "tomó", "nosotros/nosotras": "tomamos", "vosotros/vosotras": "tomasteis", "ellos/ellas/ustedes": "tomaron"},
@@ -266,10 +280,11 @@ window.verbsData = {
         "imperfecto_subjuntivo": {"yo": "tomara/tomase", "tú": "tomaras/tomases", "él/ella/usted": "tomara/tomase", "nosotros/nosotras": "tomáramos/tomásemos", "vosotros/vosotras": "tomarais/tomaseis", "ellos/ellas/ustedes": "tomaran/tomasen"}
     },
     
+    // ========== УРОВЕНЬ 2 (21-50 по частоте) ==========
     "vivir": {
         "group": "ir",
-        "level": 1,
-        "frequency": 20,
+        "level": 2,
+        "frequency": 21,
         "translation": "жить",
         "presente": {"yo": "vivo", "tú": "vives", "él/ella/usted": "vive", "nosotros/nosotras": "vivimos", "vosotros/vosotras": "vivís", "ellos/ellas/ustedes": "viven"},
         "pretérito": {"yo": "viví", "tú": "viviste", "él/ella/usted": "vivió", "nosotros/nosotras": "vivimos", "vosotros/vosotras": "vivisteis", "ellos/ellas/ustedes": "vivieron"},
@@ -280,11 +295,10 @@ window.verbsData = {
         "imperfecto_subjuntivo": {"yo": "viviera/viviese", "tú": "vivieras/vivieses", "él/ella/usted": "viviera/viviese", "nosotros/nosotras": "viviéramos/viviésemos", "vosotros/vosotras": "vivierais/vivieseis", "ellos/ellas/ustedes": "vivieran/viviesen"}
     },
 
-    // ========== УРОВЕНЬ 2 (21-50 по частоте) ==========
     "encontrar": {
         "group": "ar",
         "level": 2,
-        "frequency": 21,
+        "frequency": 22,
         "translation": "находить, встречать",
         "presente": {"yo": "encuentro", "tú": "encuentras", "él/ella/usted": "encuentra", "nosotros/nosotras": "encontramos", "vosotros/vosotras": "encontráis", "ellos/ellas/ustedes": "encuentran"},
         "pretérito": {"yo": "encontré", "tú": "encontraste", "él/ella/usted": "encontró", "nosotros/nosotras": "encontramos", "vosotros/vosotras": "encontrasteis", "ellos/ellas/ustedes": "encontraron"},
@@ -298,7 +312,7 @@ window.verbsData = {
     "creer": {
         "group": "er",
         "level": 2,
-        "frequency": 22,
+        "frequency": 23,
         "translation": "верить, думать",
         "presente": {"yo": "creo", "tú": "crees", "él/ella/usted": "cree", "nosotros/nosotras": "creemos", "vosotros/vosotras": "creéis", "ellos/ellas/ustedes": "creen"},
         "pretérito": {"yo": "creí", "tú": "creíste", "él/ella/usted": "creyó", "nosotros/nosotras": "creímos", "vosotros/vosotras": "creísteis", "ellos/ellas/ustedes": "creyeron"},
@@ -312,7 +326,7 @@ window.verbsData = {
     "conocer": {
         "group": "irregular",
         "level": 2,
-        "frequency": 23,
+        "frequency": 24,
         "translation": "знать (людей, места)",
         "presente": {"yo": "conozco", "tú": "conoces", "él/ella/usted": "conoce", "nosotros/nosotras": "conocemos", "vosotros/vosotras": "conocéis", "ellos/ellas/ustedes": "conocen"},
         "pretérito": {"yo": "conocí", "tú": "conociste", "él/ella/usted": "conoció", "nosotros/nosotras": "conocimos", "vosotros/vosotras": "conocisteis", "ellos/ellas/ustedes": "conocieron"},
@@ -326,7 +340,7 @@ window.verbsData = {
     "sentir": {
         "group": "irregular",
         "level": 2,
-        "frequency": 24,
+        "frequency": 25,
         "translation": "чувствовать, сожалеть",
         "presente": {"yo": "siento", "tú": "sientes", "él/ella/usted": "siente", "nosotros/nosotras": "sentimos", "vosotros/vosotras": "sentís", "ellos/ellas/ustedes": "sienten"},
         "pretérito": {"yo": "sentí", "tú": "sentiste", "él/ella/usted": "sintió", "nosotros/nosotras": "sentimos", "vosotros/vosotras": "sentisteis", "ellos/ellas/ustedes": "sintieron"},
@@ -340,7 +354,7 @@ window.verbsData = {
     "volver": {
         "group": "irregular",
         "level": 2,
-        "frequency": 25,
+        "frequency": 26,
         "translation": "возвращаться",
         "presente": {"yo": "vuelvo", "tú": "vuelves", "él/ella/usted": "vuelve", "nosotros/nosotras": "volvemos", "vosotros/vosotras": "volvéis", "ellos/ellas/ustedes": "vuelven"},
         "pretérito": {"yo": "volví", "tú": "volviste", "él/ella/usted": "volvió", "nosotros/nosotras": "volvimos", "vosotros/vosotras": "volvisteis", "ellos/ellas/ustedes": "volvieron"},
@@ -354,7 +368,7 @@ window.verbsData = {
     "seguir": {
         "group": "irregular",
         "level": 2,
-        "frequency": 26,
+        "frequency": 27,
         "translation": "следовать, продолжать",
         "presente": {"yo": "sigo", "tú": "sigues", "él/ella/usted": "sigue", "nosotros/nosotras": "seguimos", "vosotros/vosotras": "seguís", "ellos/ellas/ustedes": "siguen"},
         "pretérito": {"yo": "seguí", "tú": "seguiste", "él/ella/usted": "siguió", "nosotros/nosotras": "seguimos", "vosotros/vosotras": "seguisteis", "ellos/ellas/ustedes": "siguieron"},
@@ -368,7 +382,7 @@ window.verbsData = {
     "entender": {
         "group": "irregular",
         "level": 2,
-        "frequency": 27,
+        "frequency": 28,
         "translation": "понимать",
         "presente": {"yo": "entiendo", "tú": "entiendes", "él/ella/usted": "entiende", "nosotros/nosotras": "entendemos", "vosotros/vosotras": "entendéis", "ellos/ellas/ustedes": "entienden"},
         "pretérito": {"yo": "entendí", "tú": "entendiste", "él/ella/usted": "entendió", "nosotros/nosotras": "entendimos", "vosotros/vosotras": "entendisteis", "ellos/ellas/ustedes": "entendieron"},
@@ -382,7 +396,7 @@ window.verbsData = {
     "empezar": {
         "group": "irregular",
         "level": 2,
-        "frequency": 28,
+        "frequency": 29,
         "translation": "начинать",
         "presente": {"yo": "empiezo", "tú": "empiezas", "él/ella/usted": "empieza", "nosotros/nosotras": "empezamos", "vosotros/vosotras": "empezáis", "ellos/ellas/ustedes": "empiezan"},
         "pretérito": {"yo": "empecé", "tú": "empezaste", "él/ella/usted": "empezó", "nosotros/nosotras": "empezamos", "vosotros/vosotras": "empezasteis", "ellos/ellas/ustedes": "empezaron"},
@@ -396,7 +410,7 @@ window.verbsData = {
     "recordar": {
         "group": "irregular",
         "level": 2,
-        "frequency": 29,
+        "frequency": 30,
         "translation": "вспоминать, помнить",
         "presente": {"yo": "recuerdo", "tú": "recuerdas", "él/ella/usted": "recuerda", "nosotros/nosotras": "recordamos", "vosotros/vosotras": "recordáis", "ellos/ellas/ustedes": "recuerdan"},
         "pretérito": {"yo": "recordé", "tú": "recordaste", "él/ella/usted": "recordó", "nosotros/nosotras": "recordamos", "vosotros/vosotras": "recordasteis", "ellos/ellas/ustedes": "recordaron"},
@@ -410,7 +424,7 @@ window.verbsData = {
     "trabajar": {
         "group": "ar",
         "level": 2,
-        "frequency": 30,
+        "frequency": 31,
         "translation": "работать",
         "presente": {"yo": "trabajo", "tú": "trabajas", "él/ella/usted": "trabaja", "nosotros/nosotras": "trabajamos", "vosotros/vosotras": "trabajáis", "ellos/ellas/ustedes": "trabajan"},
         "pretérito": {"yo": "trabajé", "tú": "trabajaste", "él/ella/usted": "trabajó", "nosotros/nosotras": "trabajamos", "vosotros/vosotras": "trabajasteis", "ellos/ellas/ustedes": "trabajaron"},
@@ -424,7 +438,7 @@ window.verbsData = {
     "escribir": {
         "group": "ir",
         "level": 2,
-        "frequency": 31,
+        "frequency": 32,
         "translation": "писать",
         "presente": {"yo": "escribo", "tú": "escribes", "él/ella/usted": "escribe", "nosotros/nosotras": "escribimos", "vosotros/vosotras": "escribís", "ellos/ellas/ustedes": "escriben"},
         "pretérito": {"yo": "escribí", "tú": "escribiste", "él/ella/usted": "escribió", "nosotros/nosotras": "escribimos", "vosotros/vosotras": "escribisteis", "ellos/ellas/ustedes": "escribieron"},
@@ -438,7 +452,7 @@ window.verbsData = {
     "esperar": {
         "group": "ar",
         "level": 2,
-        "frequency": 32,
+        "frequency": 33,
         "translation": "ждать, надеяться",
         "presente": {"yo": "espero", "tú": "esperas", "él/ella/usted": "espera", "nosotros/nosotras": "esperamos", "vosotros/vosotras": "esperáis", "ellos/ellas/ustedes": "esperan"},
         "pretérito": {"yo": "esperé", "tú": "esperaste", "él/ella/usted": "esperó", "nosotros/nosotras": "esperamos", "vosotros/vosotras": "esperasteis", "ellos/ellas/ustedes": "esperaron"},
@@ -452,7 +466,7 @@ window.verbsData = {
     "buscar": {
         "group": "ar",
         "level": 2,
-        "frequency": 33,
+        "frequency": 34,
         "translation": "искать",
         "presente": {"yo": "busco", "tú": "buscas", "él/ella/usted": "busca", "nosotros/nosotras": "buscamos", "vosotros/vosotras": "buscáis", "ellos/ellas/ustedes": "buscan"},
         "pretérito": {"yo": "busqué", "tú": "buscaste", "él/ella/usted": "buscó", "nosotros/nosotras": "buscamos", "vosotros/vosotras": "buscasteis", "ellos/ellas/ustedes": "buscaron"},
@@ -466,7 +480,7 @@ window.verbsData = {
     "mirar": {
         "group": "ar",
         "level": 2,
-        "frequency": 34,
+        "frequency": 35,
         "translation": "смотреть",
         "presente": {"yo": "miro", "tú": "miras", "él/ella/usted": "mira", "nosotros/nosotras": "miramos", "vosotros/vosotras": "miráis", "ellos/ellas/ustedes": "miran"},
         "pretérito": {"yo": "miré", "tú": "miraste", "él/ella/usted": "miró", "nosotros/nosotras": "miramos", "vosotros/vosotras": "mirasteis", "ellos/ellas/ustedes": "miraron"},
@@ -480,7 +494,7 @@ window.verbsData = {
     "leer": {
         "group": "er",
         "level": 2,
-        "frequency": 35,
+        "frequency": 36,
         "translation": "читать",
         "presente": {"yo": "leo", "tú": "lees", "él/ella/usted": "lee", "nosotros/nosotras": "leemos", "vosotros/vosotras": "leéis", "ellos/ellas/ustedes": "leen"},
         "pretérito": {"yo": "leí", "tú": "leíste", "él/ella/usted": "leyó", "nosotros/nosotras": "leímos", "vosotros/vosotras": "leísteis", "ellos/ellas/ustedes": "leyeron"},
@@ -490,11 +504,25 @@ window.verbsData = {
         "presente_subjuntivo": {"yo": "lea", "tú": "leas", "él/ella/usted": "lea", "nosotros/nosotras": "leamos", "vosotros/vosotras": "leáis", "ellos/ellas/ustedes": "lean"},
         "imperfecto_subjuntivo": {"yo": "leyera/leyese", "tú": "leyeras/leyeses", "él/ella/usted": "leyera/leyese", "nosotros/nosotras": "leyéramos/leyésemos", "vosotros/vosotras": "leyerais/leyeseis", "ellos/ellas/ustedes": "leyeran/leyesen"}
     },
+
+"deber": {
+        "group": "er",
+        "level": 2,
+        "frequency": 37,
+        "translation": "должен, обязан",
+        "presente": {"yo": "debo", "tú": "debes", "él/ella/usted": "debe", "nosotros/nosotras": "debemos", "vosotros/vosotras": "debéis", "ellos/ellas/ustedes": "deben"},
+        "pretérito": {"yo": "debí", "tú": "debiste", "él/ella/usted": "debió", "nosotros/nosotras": "debimos", "vosotros/vosotras": "debisteis", "ellos/ellas/ustedes": "debieron"},
+        "imperfecto": {"yo": "debía", "tú": "debías", "él/ella/usted": "debía", "nosotros/nosotras": "debíamos", "vosotros/vosotras": "debíais", "ellos/ellas/ustedes": "debían"},
+        "futuro": {"yo": "deberé", "tú": "deberás", "él/ella/usted": "deberá", "nosotros/nosotras": "deberemos", "vosotros/vosotras": "deberéis", "ellos/ellas/ustedes": "deberán"},
+        "condicional": {"yo": "debería", "tú": "deberías", "él/ella/usted": "debería", "nosotros/nosotras": "deberíamos", "vosotros/vosotras": "deberíais", "ellos/ellas/ustedes": "deberían"},
+        "presente_subjuntivo": {"yo": "deba", "tú": "debas", "él/ella/usted": "deba", "nosotros/nosotras": "debamos", "vosotros/vosotras": "debáis", "ellos/ellas/ustedes": "deban"},
+        "imperfecto_subjuntivo": {"yo": "debiera/debiese", "tú": "debieras/debieses", "él/ella/usted": "debiera/debiese", "nosotros/nosotras": "debiéramos/debiésemos", "vosotros/vosotras": "debierais/debieseis", "ellos/ellas/ustedes": "debieran/debiesen"}
+    },
     
     "llevar": {
         "group": "ar",
         "level": 2,
-        "frequency": 36,
+        "frequency": 38,
         "translation": "нести, носить, везти",
         "presente": {"yo": "llevo", "tú": "llevas", "él/ella/usted": "lleva", "nosotros/nosotras": "llevamos", "vosotros/vosotras": "lleváis", "ellos/ellas/ustedes": "llevan"},
         "pretérito": {"yo": "llevé", "tú": "llevaste", "él/ella/usted": "llevó", "nosotros/nosotras": "llevamos", "vosotros/vosotras": "llevasteis", "ellos/ellas/ustedes": "llevaron"},
@@ -508,7 +536,7 @@ window.verbsData = {
     "necesitar": {
         "group": "ar",
         "level": 2,
-        "frequency": 37,
+        "frequency": 39,
         "translation": "нуждаться",
         "presente": {"yo": "necesito", "tú": "necesitas", "él/ella/usted": "necesita", "nosotros/nosotras": "necesitamos", "vosotros/vosotras": "necesitáis", "ellos/ellas/ustedes": "necesitan"},
         "pretérito": {"yo": "necesité", "tú": "necesitaste", "él/ella/usted": "necesitó", "nosotros/nosotras": "necesitamos", "vosotros/vosotras": "necesitasteis", "ellos/ellas/ustedes": "necesitaron"},
@@ -522,7 +550,7 @@ window.verbsData = {
     "parecer": {
         "group": "irregular",
         "level": 2,
-        "frequency": 38,
+        "frequency": 40,
         "translation": "казаться",
         "presente": {"yo": "parezco", "tú": "pareces", "él/ella/usted": "parece", "nosotros/nosotras": "parecemos", "vosotros/vosotras": "parecéis", "ellos/ellas/ustedes": "parecen"},
         "pretérito": {"yo": "parecí", "tú": "pareciste", "él/ella/usted": "pareció", "nosotros/nosotras": "parecimos", "vosotros/vosotras": "parecisteis", "ellos/ellas/ustedes": "parecieron"},
@@ -536,7 +564,7 @@ window.verbsData = {
     "pasar": {
         "group": "ar",
         "level": 2,
-        "frequency": 39,
+        "frequency": 41,
         "translation": "проходить, проводить время",
         "presente": {"yo": "paso", "tú": "pasas", "él/ella/usted": "pasa", "nosotros/nosotras": "pasamos", "vosotros/vosotras": "pasáis", "ellos/ellas/ustedes": "pasan"},
         "pretérito": {"yo": "pasé", "tú": "pasaste", "él/ella/usted": "pasó", "nosotros/nosotras": "pasamos", "vosotros/vosotras": "pasasteis", "ellos/ellas/ustedes": "pasaron"},
@@ -550,7 +578,7 @@ window.verbsData = {
     "dormir": {
         "group": "irregular",
         "level": 2,
-        "frequency": 40,
+        "frequency": 42,
         "translation": "спать",
         "presente": {"yo": "duermo", "tú": "duermes", "él/ella/usted": "duerme", "nosotros/nosotras": "dormimos", "vosotros/vosotras": "dormís", "ellos/ellas/ustedes": "duermen"},
         "pretérito": {"yo": "dormí", "tú": "dormiste", "él/ella/usted": "durmió", "nosotros/nosotras": "dormimos", "vosotros/vosotras": "dormisteis", "ellos/ellas/ustedes": "durmieron"},
@@ -564,7 +592,7 @@ window.verbsData = {
     "comprar": {
         "group": "ar",
         "level": 2,
-        "frequency": 41,
+        "frequency": 43,
         "translation": "покупать",
         "presente": {"yo": "compro", "tú": "compras", "él/ella/usted": "compra", "nosotros/nosotras": "compramos", "vosotros/vosotras": "compráis", "ellos/ellas/ustedes": "compran"},
         "pretérito": {"yo": "compré", "tú": "compraste", "él/ella/usted": "compró", "nosotros/nosotras": "compramos", "vosotros/vosotras": "comprasteis", "ellos/ellas/ustedes": "compraron"},
@@ -578,7 +606,7 @@ window.verbsData = {
     "abrir": {
         "group": "ir",
         "level": 2,
-        "frequency": 42,
+        "frequency": 44,
         "translation": "открывать",
         "presente": {"yo": "abro", "tú": "abres", "él/ella/usted": "abre", "nosotros/nosotras": "abrimos", "vosotros/vosotras": "abríis", "ellos/ellas/ustedes": "abren"},
         "pretérito": {"yo": "abrí", "tú": "abriste", "él/ella/usted": "abrió", "nosotros/nosotras": "abrimos", "vosotros/vosotras": "abristeis", "ellos/ellas/ustedes": "abrieron"},
@@ -592,7 +620,7 @@ window.verbsData = {
     "perder": {
         "group": "er",
         "level": 2,
-        "frequency": 43,
+        "frequency": 45,
         "translation": "терять, проигрывать",
         "presente": {"yo": "pierdo", "tú": "pierdes", "él/ella/usted": "pierde", "nosotros/nosotras": "perdemos", "vosotros/vosotras": "perdéis", "ellos/ellas/ustedes": "pierden"},
         "pretérito": {"yo": "perdí", "tú": "perdiste", "él/ella/usted": "perdió", "nosotros/nosotras": "perdimos", "vosotros/vosotras": "perdisteis", "ellos/ellas/ustedes": "perdieron"},
@@ -603,24 +631,10 @@ window.verbsData = {
         "imperfecto_subjuntivo": {"yo": "perdiera/perdiese", "tú": "perdieras/perdieses", "él/ella/usted": "perdiera/perdiese", "nosotros/nosotras": "perdiéramos/perdiésemos", "vosotros/vosotras": "perdierais/perdieseis", "ellos/ellas/ustedes": "perdieran/perdiesen"}
     },
     
-    "oir": {
-        "group": "irregular",
-        "level": 2,
-        "frequency": 44,
-        "translation": "слышать",
-        "presente": {"yo": "oigo", "tú": "oyes", "él/ella/usted": "oye", "nosotros/nosotras": "oímos", "vosotros/vosotras": "oís", "ellos/ellas/ustedes": "oyen"},
-        "pretérito": {"yo": "oí", "tú": "oíste", "él/ella/usted": "oyó", "nosotros/nosotras": "oímos", "vosotros/vosotras": "oísteis", "ellos/ellas/ustedes": "oyeron"},
-        "imperfecto": {"yo": "oía", "tú": "oías", "él/ella/usted": "oía", "nosotros/nosotras": "oíamos", "vosotros/vosotras": "oíais", "ellos/ellas/ustedes": "oían"},
-        "futuro": {"yo": "oiré", "tú": "oirás", "él/ella/usted": "oirá", "nosotros/nosotras": "oiremos", "vosotros/vosotras": "oiréis", "ellos/ellas/ustedes": "oirán"},
-        "condicional": {"yo": "oiría", "tú": "oirías", "él/ella/usted": "oiría", "nosotros/nosotras": "oiríamos", "vosotros/vosotras": "oiríais", "ellos/ellas/ustedes": "oirían"},
-        "presente_subjuntivo": {"yo": "oiga", "tú": "oigas", "él/ella/usted": "oiga", "nosotros/nosotras": "oigamos", "vosotros/vosotras": "oigáis", "ellos/ellas/ustedes": "oigan"},
-        "imperfecto_subjuntivo": {"yo": "oyera/oyese", "tú": "oyeras/oyeses", "él/ella/usted": "oyera/oyese", "nosotros/nosotras": "oyéramos/oyésemos", "vosotros/vosotras": "oyerais/oyeseis", "ellos/ellas/ustedes": "oyeran/oyesen"}
-    },
-    
     "jugar": {
         "group": "irregular",
         "level": 2,
-        "frequency": 45,
+        "frequency": 46,
         "translation": "играть",
         "presente": {"yo": "juego", "tú": "juegas", "él/ella/usted": "juega", "nosotros/nosotras": "jugamos", "vosotros/vosotras": "jugáis", "ellos/ellas/ustedes": "juegan"},
         "pretérito": {"yo": "jugué", "tú": "jugaste", "él/ella/usted": "jugó", "nosotros/nosotras": "jugamos", "vosotros/vosotras": "jugasteis", "ellos/ellas/ustedes": "jugaron"},
@@ -634,7 +648,7 @@ window.verbsData = {
     "sentar": {
         "group": "irregular",
         "level": 2,
-        "frequency": 46,
+        "frequency": 47,
         "translation": "садиться",
         "presente": {"yo": "siento", "tú": "sientas", "él/ella/usted": "sienta", "nosotros/nosotras": "sentamos", "vosotros/vosotras": "sentáis", "ellos/ellas/ustedes": "sientan"},
         "pretérito": {"yo": "senté", "tú": "sentaste", "él/ella/usted": "sentó", "nosotros/nosotras": "sentamos", "vosotros/vosotras": "sentasteis", "ellos/ellas/ustedes": "sentaron"},
@@ -648,7 +662,7 @@ window.verbsData = {
     "conseguir": {
         "group": "irregular",
         "level": 2,
-        "frequency": 47,
+        "frequency": 48,
         "translation": "добиваться, получать",
         "presente": {"yo": "consigo", "tú": "consigues", "él/ella/usted": "consigue", "nosotros/nosotras": "conseguimos", "vosotros/vosotras": "conseguís", "ellos/ellas/ustedes": "consiguen"},
         "pretérito": {"yo": "conseguí", "tú": "conseguiste", "él/ella/usted": "consiguió", "nosotros/nosotras": "conseguimos", "vosotros/vosotras": "conseguisteis", "ellos/ellas/ustedes": "consiguieron"},
@@ -662,7 +676,7 @@ window.verbsData = {
     "contar": {
         "group": "irregular",
         "level": 2,
-        "frequency": 48,
+        "frequency": 49,
         "translation": "считать, рассказывать",
         "presente": {"yo": "cuento", "tú": "cuentas", "él/ella/usted": "cuenta", "nosotros/nosotras": "contamos", "vosotros/vosotras": "contáis", "ellos/ellas/ustedes": "cuentan"},
         "pretérito": {"yo": "conté", "tú": "contaste", "él/ella/usted": "contó", "nosotros/nosotras": "contamos", "vosotros/vosotras": "contasteis", "ellos/ellas/ustedes": "contaron"},
@@ -676,7 +690,7 @@ window.verbsData = {
     "oir": {
         "group": "irregular",
         "level": 2,
-        "frequency": 49,
+        "frequency": 50,
         "translation": "слышать",
         "presente": {"yo": "oigo", "tú": "oyes", "él/ella/usted": "oye", "nosotros/nosotras": "oímos", "vosotros/vosotras": "oís", "ellos/ellas/ustedes": "oyen"},
         "pretérito": {"yo": "oí", "tú": "oíste", "él/ella/usted": "oyó", "nosotros/nosotras": "oímos", "vosotros/vosotras": "oísteis", "ellos/ellas/ustedes": "oyeron"},
@@ -686,11 +700,13 @@ window.verbsData = {
         "presente_subjuntivo": {"yo": "oiga", "tú": "oigas", "él/ella/usted": "oiga", "nosotros/nosotras": "oigamos", "vosotros/vosotras": "oigáis", "ellos/ellas/ustedes": "oigan"},
         "imperfecto_subjuntivo": {"yo": "oyera/oyese", "tú": "oyeras/oyeses", "él/ella/usted": "oyera/oyese", "nosotros/nosotras": "oyéramos/oyésemos", "vosotros/vosotras": "oyerais/oyeseis", "ellos/ellas/ustedes": "oyeran/oyesen"}
     },
-    
+
+    // ========== УРОВЕНЬ 3 (51-100 по частоте) ==========
+
     "sacar": {
         "group": "ar",
-        "level": 2,
-        "frequency": 50,
+        "level": 3,
+        "frequency": 51,
         "translation": "вынимать, доставать",
         "presente": {"yo": "saco", "tú": "sacas", "él/ella/usted": "saca", "nosotros/nosotras": "sacamos", "vosotros/vosotras": "sacáis", "ellos/ellas/ustedes": "sacan"},
         "pretérito": {"yo": "saqué", "tú": "sacaste", "él/ella/usted": "sacó", "nosotros/nosotras": "sacamos", "vosotros/vosotras": "sacasteis", "ellos/ellas/ustedes": "sacaron"},
@@ -700,15 +716,11 @@ window.verbsData = {
         "presente_subjuntivo": {"yo": "saque", "tú": "saques", "él/ella/usted": "saque", "nosotros/nosotras": "saquemos", "vosotros/vosotras": "saquéis", "ellos/ellas/ustedes": "saquen"},
         "imperfecto_subjuntivo": {"yo": "sacara/sacase", "tú": "sacaras/sacases", "él/ella/usted": "sacara/sacase", "nosotros/nosotras": "sacáramos/sacásemos", "vosotros/vosotras": "sacarais/sacaseis", "ellos/ellas/ustedes": "sacaran/sacasen"}
     },
-
-    // ========== УРОВЕНЬ 3 (51-100 по частоте) ==========
-    // Здесь будут глаголы с 51 по 100
-    // Для примера добавлю несколько, остальные можно добавить по аналогии
     
     "llamar": {
         "group": "ar",
         "level": 3,
-        "frequency": 51,
+        "frequency": 52,
         "translation": "звать, называть",
         "presente": {"yo": "llamo", "tú": "llamas", "él/ella/usted": "llama", "nosotros/nosotras": "llamamos", "vosotros/vosotras": "llamáis", "ellos/ellas/ustedes": "llaman"},
         "pretérito": {"yo": "llamé", "tú": "llamaste", "él/ella/usted": "llamó", "nosotros/nosotras": "llamamos", "vosotros/vosotras": "llamasteis", "ellos/ellas/ustedes": "llamaron"},
@@ -722,7 +734,7 @@ window.verbsData = {
     "dejar": {
         "group": "ar",
         "level": 3,
-        "frequency": 52,
+        "frequency": 53,
         "translation": "оставлять, позволять",
         "presente": {"yo": "dejo", "tú": "dejas", "él/ella/usted": "deja", "nosotros/nosotras": "dejamos", "vosotros/vosotras": "dejáis", "ellos/ellas/ustedes": "dejan"},
         "pretérito": {"yo": "dejé", "tú": "dejaste", "él/ella/usted": "dejó", "nosotros/nosotras": "dejamos", "vosotros/vosotras": "dejasteis", "ellos/ellas/ustedes": "dejaron"},
@@ -736,7 +748,7 @@ window.verbsData = {
     "usar": {
         "group": "ar",
         "level": 3,
-        "frequency": 53,
+        "frequency": 54,
         "translation": "использовать",
         "presente": {"yo": "uso", "tú": "usas", "él/ella/usted": "usa", "nosotros/nosotras": "usamos", "vosotros/vosotras": "usáis", "ellos/ellas/ustedes": "usan"},
         "pretérito": {"yo": "usé", "tú": "usaste", "él/ella/usted": "usó", "nosotros/nosotras": "usamos", "vosotros/vosotras": "usasteis", "ellos/ellas/ustedes": "usaron"},
@@ -750,7 +762,7 @@ window.verbsData = {
     "cambiar": {
         "group": "ar",
         "level": 3,
-        "frequency": 54,
+        "frequency": 55,
         "translation": "менять",
         "presente": {"yo": "cambio", "tú": "cambias", "él/ella/usted": "cambia", "nosotros/nosotras": "cambiamos", "vosotros/vosotras": "cambiáis", "ellos/ellas/ustedes": "cambian"},
         "pretérito": {"yo": "cambié", "tú": "cambiaste", "él/ella/usted": "cambió", "nosotros/nosotras": "cambiamos", "vosotros/vosotras": "cambiasteis", "ellos/ellas/ustedes": "cambiaron"},
@@ -764,7 +776,7 @@ window.verbsData = {
     "continuar": {
         "group": "irregular",
         "level": 3,
-        "frequency": 55,
+        "frequency": 56,
         "translation": "продолжать",
         "presente": {"yo": "continúo", "tú": "continúas", "él/ella/usted": "continúa", "nosotros/nosotras": "continuamos", "vosotros/vosotras": "continuáis", "ellos/ellas/ustedes": "continúan"},
         "pretérito": {"yo": "continué", "tú": "continuaste", "él/ella/usted": "continuó", "nosotros/nosotras": "continuamos", "vosotros/vosotras": "continuasteis", "ellos/ellas/ustedes": "continuaron"},
@@ -778,7 +790,7 @@ window.verbsData = {
     "pedir": {
         "group": "irregular",
         "level": 3,
-        "frequency": 56,
+        "frequency": 57,
         "translation": "просить",
         "presente": {"yo": "pido", "tú": "pides", "él/ella/usted": "pide", "nosotros/nosotras": "pedimos", "vosotros/vosotras": "pedís", "ellos/ellas/ustedes": "piden"},
         "pretérito": {"yo": "pedí", "tú": "pediste", "él/ella/usted": "pidió", "nosotros/nosotras": "pedimos", "vosotros/vosotras": "pedisteis", "ellos/ellas/ustedes": "pidieron"},
@@ -792,7 +804,7 @@ window.verbsData = {
     "preferir": {
         "group": "irregular",
         "level": 3,
-        "frequency": 57,
+        "frequency": 58,
         "translation": "предпочитать",
         "presente": {"yo": "prefiero", "tú": "prefieres", "él/ella/usted": "prefiere", "nosotros/nosotras": "preferimos", "vosotros/vosotras": "preferís", "ellos/ellas/ustedes": "prefieren"},
         "pretérito": {"yo": "preferí", "tú": "preferiste", "él/ella/usted": "prefirió", "nosotros/nosotras": "preferimos", "vosotros/vosotras": "preferisteis", "ellos/ellas/ustedes": "prefirieron"},
@@ -806,7 +818,7 @@ window.verbsData = {
     "servir": {
         "group": "irregular",
         "level": 3,
-        "frequency": 58,
+        "frequency": 59,
         "translation": "служить",
         "presente": {"yo": "sirvo", "tú": "sirves", "él/ella/usted": "sirve", "nosotros/nosotras": "servimos", "vosotros/vosotras": "servís", "ellos/ellas/ustedes": "sirven"},
         "pretérito": {"yo": "serví", "tú": "serviste", "él/ella/usted": "sirvió", "nosotros/nosotras": "servimos", "vosotros/vosotras": "servisteis", "ellos/ellas/ustedes": "sirvieron"},
@@ -820,7 +832,7 @@ window.verbsData = {
     "ganar": {
         "group": "ar",
         "level": 3,
-        "frequency": 59,
+        "frequency": 60,
         "translation": "выигрывать, зарабатывать",
         "presente": {"yo": "gano", "tú": "ganas", "él/ella/usted": "gana", "nosotros/nosotras": "ganamos", "vosotros/vosotras": "ganáis", "ellos/ellas/ustedes": "ganan"},
         "pretérito": {"yo": "gané", "tú": "ganaste", "él/ella/usted": "ganó", "nosotros/nosotras": "ganamos", "vosotros/vosotras": "ganasteis", "ellos/ellas/ustedes": "ganaron"},
@@ -834,7 +846,7 @@ window.verbsData = {
     "explicar": {
         "group": "ar",
         "level": 3,
-        "frequency": 60,
+        "frequency": 61,
         "translation": "объяснять",
         "presente": {"yo": "explico", "tú": "explicas", "él/ella/usted": "explica", "nosotros/nosotras": "explicamos", "vosotros/vosotras": "explicáis", "ellos/ellas/ustedes": "explican"},
         "pretérito": {"yo": "expliqué", "tú": "explicaste", "él/ella/usted": "explicó", "nosotros/nosotras": "explicamos", "vosotros/vosotras": "explicasteis", "ellos/ellas/ustedes": "explicaron"},
@@ -848,7 +860,7 @@ window.verbsData = {
         "entrar": {
         "group": "ar",
         "level": 3,
-        "frequency": 61,
+        "frequency": 62,
         "translation": "входить",
         "presente": {"yo": "entro", "tú": "entras", "él/ella/usted": "entra", "nosotros/nosotras": "entramos", "vosotros/vosotras": "entráis", "ellos/ellas/ustedes": "entran"},
         "pretérito": {"yo": "entré", "tú": "entraste", "él/ella/usted": "entró", "nosotros/nosotras": "entramos", "vosotros/vosotras": "entrasteis", "ellos/ellas/ustedes": "entraron"},
@@ -862,7 +874,7 @@ window.verbsData = {
     "repetir": {
         "group": "irregular",
         "level": 3,
-        "frequency": 62,
+        "frequency": 63,
         "translation": "повторять",
         "presente": {"yo": "repito", "tú": "repites", "él/ella/usted": "repite", "nosotros/nosotras": "repetimos", "vosotros/vosotras": "repetís", "ellos/ellas/ustedes": "repiten"},
         "pretérito": {"yo": "repetí", "tú": "repetiste", "él/ella/usted": "repitió", "nosotros/nosotras": "repetimos", "vosotros/vosotras": "repetisteis", "ellos/ellas/ustedes": "repitieron"},
@@ -876,7 +888,7 @@ window.verbsData = {
     "ocurrir": {
         "group": "ir",
         "level": 3,
-        "frequency": 63,
+        "frequency": 64,
         "translation": "происходить",
         "presente": {"yo": "ocurro", "tú": "ocurres", "él/ella/usted": "ocurre", "nosotros/nosotras": "ocurrimos", "vosotros/vosotras": "ocurrís", "ellos/ellas/ustedes": "ocurren"},
         "pretérito": {"yo": "ocurrí", "tú": "ocurriste", "él/ella/usted": "ocurrió", "nosotros/nosotras": "ocurrimos", "vosotros/vosotras": "ocurristeis", "ellos/ellas/ustedes": "ocurrieron"},
@@ -890,7 +902,7 @@ window.verbsData = {
     "costar": {
         "group": "irregular",
         "level": 3,
-        "frequency": 64,
+        "frequency": 65,
         "translation": "стоить",
         "presente": {"yo": "cuesto", "tú": "cuestas", "él/ella/usted": "cuesta", "nosotros/nosotras": "costamos", "vosotros/vosotras": "costáis", "ellos/ellas/ustedes": "cuestan"},
         "pretérito": {"yo": "costé", "tú": "costaste", "él/ella/usted": "costó", "nosotros/nosotras": "costamos", "vosotros/vosotras": "costasteis", "ellos/ellas/ustedes": "costaron"},
@@ -904,7 +916,7 @@ window.verbsData = {
     "cerrar": {
         "group": "irregular",
         "level": 3,
-        "frequency": 65,
+        "frequency": 66,
         "translation": "закрывать",
         "presente": {"yo": "cierro", "tú": "cierras", "él/ella/usted": "cierra", "nosotros/nosotras": "cerramos", "vosotros/vosotras": "cerráis", "ellos/ellas/ustedes": "cierran"},
         "pretérito": {"yo": "cerré", "tú": "cerraste", "él/ella/usted": "cerró", "nosotros/nosotras": "cerramos", "vosotros/vosotras": "cerrasteis", "ellos/ellas/ustedes": "cerraron"},
@@ -918,7 +930,7 @@ window.verbsData = {
     "acabar": {
         "group": "ar",
         "level": 3,
-        "frequency": 66,
+        "frequency": 67,
         "translation": "заканчивать",
         "presente": {"yo": "acabo", "tú": "acabas", "él/ella/usted": "acaba", "nosotros/nosotras": "acabamos", "vosotros/vosotras": "acabáis", "ellos/ellas/ustedes": "acaban"},
         "pretérito": {"yo": "acabé", "tú": "acabaste", "él/ella/usted": "acabó", "nosotros/nosotras": "acabamos", "vosotros/vosotras": "acabasteis", "ellos/ellas/ustedes": "acabaron"},
@@ -932,7 +944,7 @@ window.verbsData = {
     "llover": {
         "group": "irregular",
         "level": 3,
-        "frequency": 67,
+        "frequency": 68,
         "translation": "идти (о дожде)",
         "presente": {"yo": "lluevo", "tú": "llueves", "él/ella/usted": "llueve", "nosotros/nosotras": "llovemos", "vosotros/vosotras": "llovéis", "ellos/ellas/ustedes": "llueven"},
         "pretérito": {"yo": "lloví", "tú": "lloviste", "él/ella/usted": "llovió", "nosotros/nosotras": "llovimos", "vosotros/vosotras": "llovisteis", "ellos/ellas/ustedes": "llovieron"},
@@ -946,7 +958,7 @@ window.verbsData = {
     "producir": {
         "group": "irregular",
         "level": 3,
-        "frequency": 68,
+        "frequency": 69,
         "translation": "производить",
         "presente": {"yo": "produzco", "tú": "produces", "él/ella/usted": "produce", "nosotros/nosotras": "producimos", "vosotros/vosotras": "producís", "ellos/ellas/ustedes": "producen"},
         "pretérito": {"yo": "produje", "tú": "produjiste", "él/ella/usted": "produjo", "nosotros/nosotras": "produjimos", "vosotros/vosotras": "produjisteis", "ellos/ellas/ustedes": "produjeron"},
@@ -960,7 +972,7 @@ window.verbsData = {
     "dirigir": {
         "group": "irregular",
         "level": 3,
-        "frequency": 69,
+        "frequency": 70,
         "translation": "управлять, направлять",
         "presente": {"yo": "dirijo", "tú": "diriges", "él/ella/usted": "dirige", "nosotros/nosotras": "dirigimos", "vosotros/vosotras": "dirigís", "ellos/ellas/ustedes": "dirigen"},
         "pretérito": {"yo": "dirigí", "tú": "dirigiste", "él/ella/usted": "dirigió", "nosotros/nosotras": "dirigimos", "vosotros/vosotras": "dirigisteis", "ellos/ellas/ustedes": "dirigieron"},
@@ -974,7 +986,7 @@ window.verbsData = {
     "aparecer": {
         "group": "irregular",
         "level": 3,
-        "frequency": 70,
+        "frequency": 71,
         "translation": "появляться",
         "presente": {"yo": "aparezco", "tú": "apareces", "él/ella/usted": "aparece", "nosotros/nosotras": "aparecemos", "vosotros/vosotras": "aparecéis", "ellos/ellas/ustedes": "aparecen"},
         "pretérito": {"yo": "aparecí", "tú": "apareciste", "él/ella/usted": "apareció", "nosotros/nosotras": "aparecimos", "vosotros/vosotras": "aparecisteis", "ellos/ellas/ustedes": "aparecieron"},
@@ -988,7 +1000,7 @@ window.verbsData = {
     "utilizar": {
         "group": "ar",
         "level": 3,
-        "frequency": 71,
+        "frequency": 72,
         "translation": "использовать",
         "presente": {"yo": "utilizo", "tú": "utilizas", "él/ella/usted": "utiliza", "nosotros/nosotras": "utilizamos", "vosotros/vosotras": "utilizáis", "ellos/ellas/ustedes": "utilizan"},
         "pretérito": {"yo": "utilicé", "tú": "utilizaste", "él/ella/usted": "utilizó", "nosotros/nosotras": "utilizamos", "vosotros/vosotras": "utilizasteis", "ellos/ellas/ustedes": "utilizaron"},
@@ -1002,7 +1014,7 @@ window.verbsData = {
     "escuchar": {
         "group": "ar",
         "level": 3,
-        "frequency": 72,
+        "frequency": 73,
         "translation": "слушать",
         "presente": {"yo": "escucho", "tú": "escuchas", "él/ella/usted": "escucha", "nosotros/nosotras": "escuchamos", "vosotros/vosotras": "escucháis", "ellos/ellas/ustedes": "escuchan"},
         "pretérito": {"yo": "escuché", "tú": "escuchaste", "él/ella/usted": "escuchó", "nosotros/nosotras": "escuchamos", "vosotros/vosotras": "escuchasteis", "ellos/ellas/ustedes": "escucharon"},
@@ -1016,7 +1028,7 @@ window.verbsData = {
     "construir": {
         "group": "irregular",
         "level": 3,
-        "frequency": 73,
+        "frequency": 74,
         "translation": "строить",
         "presente": {"yo": "construyo", "tú": "construyes", "él/ella/usted": "construye", "nosotros/nosotras": "construimos", "vosotros/vosotras": "construís", "ellos/ellas/ustedes": "construyen"},
         "pretérito": {"yo": "construí", "tú": "construiste", "él/ella/usted": "construyó", "nosotros/nosotras": "construimos", "vosotros/vosotras": "construisteis", "ellos/ellas/ustedes": "construyeron"},
@@ -1030,7 +1042,7 @@ window.verbsData = {
     "mostrar": {
         "group": "irregular",
         "level": 3,
-        "frequency": 74,
+        "frequency": 75,
         "translation": "показывать",
         "presente": {"yo": "muestro", "tú": "muestras", "él/ella/usted": "muestra", "nosotros/nosotras": "mostramos", "vosotros/vosotras": "mostráis", "ellos/ellas/ustedes": "muestran"},
         "pretérito": {"yo": "mostré", "tú": "mostraste", "él/ella/usted": "mostró", "nosotros/nosotras": "mostramos", "vosotros/vosotras": "mostrasteis", "ellos/ellas/ustedes": "mostraron"},
@@ -1044,7 +1056,7 @@ window.verbsData = {
     "formar": {
         "group": "ar",
         "level": 3,
-        "frequency": 75,
+        "frequency": 76,
         "translation": "формировать, образовывать",
         "presente": {"yo": "formo", "tú": "formas", "él/ella/usted": "forma", "nosotros/nosotras": "formamos", "vosotros/vosotras": "formáis", "ellos/ellas/ustedes": "forman"},
         "pretérito": {"yo": "formé", "tú": "formaste", "él/ella/usted": "formó", "nosotros/nosotras": "formamos", "vosotros/vosotras": "formasteis", "ellos/ellas/ustedes": "formaron"},
@@ -1058,7 +1070,7 @@ window.verbsData = {
     "tratar": {
         "group": "ar",
         "level": 3,
-        "frequency": 76,
+        "frequency": 77,
         "translation": "обращаться, пытаться",
         "presente": {"yo": "trato", "tú": "tratas", "él/ella/usted": "trata", "nosotros/nosotras": "tratamos", "vosotros/vosotras": "tratáis", "ellos/ellas/ustedes": "tratan"},
         "pretérito": {"yo": "traté", "tú": "trataste", "él/ella/usted": "trató", "nosotros/nosotras": "tratamos", "vosotros/vosotras": "tratasteis", "ellos/ellas/ustedes": "trataron"},
@@ -1072,7 +1084,7 @@ window.verbsData = {
     "morir": {
         "group": "irregular",
         "level": 3,
-        "frequency": 77,
+        "frequency": 78,
         "translation": "умирать",
         "presente": {"yo": "muero", "tú": "mueres", "él/ella/usted": "muere", "nosotros/nosotras": "morimos", "vosotros/vosotras": "morís", "ellos/ellas/ustedes": "mueren"},
         "pretérito": {"yo": "morí", "tú": "moriste", "él/ella/usted": "murió", "nosotros/nosotras": "morimos", "vosotros/vosotras": "moristeis", "ellos/ellas/ustedes": "murieron"},
@@ -1086,7 +1098,7 @@ window.verbsData = {
     "ayudar": {
         "group": "ar",
         "level": 3,
-        "frequency": 78,
+        "frequency": 79,
         "translation": "помогать",
         "presente": {"yo": "ayudo", "tú": "ayudas", "él/ella/usted": "ayuda", "nosotros/nosotras": "ayudamos", "vosotros/vosotras": "ayudáis", "ellos/ellas/ustedes": "ayudan"},
         "pretérito": {"yo": "ayudé", "tú": "ayudaste", "él/ella/usted": "ayudó", "nosotros/nosotras": "ayudamos", "vosotros/vosotras": "ayudasteis", "ellos/ellas/ustedes": "ayudaron"},
@@ -1100,7 +1112,7 @@ window.verbsData = {
     "obtener": {
         "group": "irregular",
         "level": 3,
-        "frequency": 79,
+        "frequency": 80,
         "translation": "получать",
         "presente": {"yo": "obtengo", "tú": "obtienes", "él/ella/usted": "obtiene", "nosotros/nosotras": "obtenemos", "vosotros/vosotras": "obtenéis", "ellos/ellas/ustedes": "obtienen"},
         "pretérito": {"yo": "obtuve", "tú": "obtuviste", "él/ella/usted": "obtuvo", "nosotros/nosotras": "obtuvimos", "vosotros/vosotras": "obtuvisteis", "ellos/ellas/ustedes": "obtuvieron"},
@@ -1114,7 +1126,7 @@ window.verbsData = {
     "mantener": {
         "group": "irregular",
         "level": 3,
-        "frequency": 80,
+        "frequency": 81,
         "translation": "поддерживать",
         "presente": {"yo": "mantengo", "tú": "mantienes", "él/ella/usted": "mantiene", "nosotros/nosotras": "mantenemos", "vosotros/vosotras": "mantenéis", "ellos/ellas/ustedes": "mantienen"},
         "pretérito": {"yo": "mantuve", "tú": "mantuviste", "él/ella/usted": "mantuvo", "nosotros/nosotras": "mantuvimos", "vosotros/vosotras": "mantuvisteis", "ellos/ellas/ustedes": "mantuvieron"},
@@ -1128,7 +1140,7 @@ window.verbsData = {
     "presentar": {
         "group": "ar",
         "level": 3,
-        "frequency": 81,
+        "frequency": 82,
         "translation": "представлять",
         "presente": {"yo": "presento", "tú": "presentas", "él/ella/usted": "presenta", "nosotros/nosotras": "presentamos", "vosotros/vosotras": "presentáis", "ellos/ellas/ustedes": "presentan"},
         "pretérito": {"yo": "presenté", "tú": "presentaste", "él/ella/usted": "presentó", "nosotros/nosotras": "presentamos", "vosotros/vosotras": "presentasteis", "ellos/ellas/ustedes": "presentaron"},
@@ -1142,7 +1154,7 @@ window.verbsData = {
     "permitir": {
         "group": "ir",
         "level": 3,
-        "frequency": 82,
+        "frequency": 83,
         "translation": "позволять",
         "presente": {"yo": "permito", "tú": "permites", "él/ella/usted": "permite", "nosotros/nosotras": "permitimos", "vosotros/vosotras": "permitís", "ellos/ellas/ustedes": "permiten"},
         "pretérito": {"yo": "permití", "tú": "permitiste", "él/ella/usted": "permitió", "nosotros/nosotras": "permitimos", "vosotros/vosotras": "permitisteis", "ellos/ellas/ustedes": "permitieron"},
@@ -1156,7 +1168,7 @@ window.verbsData = {
     "ofrecer": {
         "group": "irregular",
         "level": 3,
-        "frequency": 83,
+        "frequency": 84,
         "translation": "предлагать",
         "presente": {"yo": "ofrezco", "tú": "ofreces", "él/ella/usted": "ofrece", "nosotros/nosotras": "ofrecemos", "vosotros/vosotras": "ofrecéis", "ellos/ellas/ustedes": "ofrecen"},
         "pretérito": {"yo": "ofrecí", "tú": "ofreciste", "él/ella/usted": "ofreció", "nosotros/nosotras": "ofrecimos", "vosotros/vosotras": "ofrecisteis", "ellos/ellas/ustedes": "ofrecieron"},
@@ -1170,7 +1182,7 @@ window.verbsData = {
     "significar": {
         "group": "ar",
         "level": 3,
-        "frequency": 84,
+        "frequency": 85,
         "translation": "означать",
         "presente": {"yo": "significo", "tú": "significas", "él/ella/usted": "significa", "nosotros/nosotras": "significamos", "vosotros/vosotras": "significáis", "ellos/ellas/ustedes": "significan"},
         "pretérito": {"yo": "signifiqué", "tú": "significaste", "él/ella/usted": "significó", "nosotros/nosotras": "significamos", "vosotros/vosotras": "significasteis", "ellos/ellas/ustedes": "significaron"},
@@ -1184,7 +1196,7 @@ window.verbsData = {
     "suponer": {
         "group": "irregular",
         "level": 3,
-        "frequency": 85,
+        "frequency": 86,
         "translation": "предполагать",
         "presente": {"yo": "supongo", "tú": "supones", "él/ella/usted": "supone", "nosotros/nosotras": "suponemos", "vosotros/vosotras": "suponéis", "ellos/ellas/ustedes": "suponen"},
         "pretérito": {"yo": "supuse", "tú": "supusiste", "él/ella/usted": "supuso", "nosotros/nosotras": "supusimos", "vosotros/vosotras": "supusisteis", "ellos/ellas/ustedes": "supusieron"},
@@ -1198,7 +1210,7 @@ window.verbsData = {
     "levantar": {
         "group": "ar",
         "level": 3,
-        "frequency": 86,
+        "frequency": 87,
         "translation": "поднимать",
         "presente": {"yo": "levanto", "tú": "levantas", "él/ella/usted": "levanta", "nosotros/nosotras": "levantamos", "vosotros/vosotras": "levantáis", "ellos/ellas/ustedes": "levantan"},
         "pretérito": {"yo": "levanté", "tú": "levantaste", "él/ella/usted": "levantó", "nosotros/nosotras": "levantamos", "vosotros/vosotras": "levantasteis", "ellos/ellas/ustedes": "levantaron"},
@@ -1212,7 +1224,7 @@ window.verbsData = {
     "describir": {
         "group": "irregular",
         "level": 3,
-        "frequency": 87,
+        "frequency": 88,
         "translation": "описывать",
         "presente": {"yo": "describo", "tú": "describes", "él/ella/usted": "describe", "nosotros/nosotras": "describimos", "vosotros/vosotras": "describís", "ellos/ellas/ustedes": "describen"},
         "pretérito": {"yo": "describí", "tú": "describiste", "él/ella/usted": "describió", "nosotros/nosotras": "describimos", "vosotros/vosotras": "describisteis", "ellos/ellas/ustedes": "describieron"},
@@ -1226,7 +1238,7 @@ window.verbsData = {
     "probar": {
         "group": "irregular",
         "level": 3,
-        "frequency": 88,
+        "frequency": 89,
         "translation": "пробовать",
         "presente": {"yo": "pruebo", "tú": "pruebas", "él/ella/usted": "prueba", "nosotros/nosotras": "probamos", "vosotros/vosotras": "probáis", "ellos/ellas/ustedes": "prueban"},
         "pretérito": {"yo": "probé", "tú": "probaste", "él/ella/usted": "probó", "nosotros/nosotras": "probamos", "vosotros/vosotras": "probasteis", "ellos/ellas/ustedes": "probaron"},
@@ -1240,7 +1252,7 @@ window.verbsData = {
     "quedar": {
         "group": "ar",
         "level": 3,
-        "frequency": 89,
+        "frequency": 90,
         "translation": "оставаться, договариваться",
         "presente": {"yo": "quedo", "tú": "quedas", "él/ella/usted": "queda", "nosotros/nosotras": "quedamos", "vosotros/vosotras": "quedáis", "ellos/ellas/ustedes": "quedan"},
         "pretérito": {"yo": "quedé", "tú": "quedaste", "él/ella/usted": "quedó", "nosotros/nosotras": "quedamos", "vosotros/vosotras": "quedasteis", "ellos/ellas/ustedes": "quedaron"},
@@ -1254,7 +1266,7 @@ window.verbsData = {
     "incluir": {
         "group": "irregular",
         "level": 3,
-        "frequency": 90,
+        "frequency": 91,
         "translation": "включать",
         "presente": {"yo": "incluyo", "tú": "incluyes", "él/ella/usted": "incluye", "nosotros/nosotras": "incluimos", "vosotros/vosotras": "incluís", "ellos/ellas/ustedes": "incluyen"},
         "pretérito": {"yo": "incluí", "tú": "incluiste", "él/ella/usted": "incluyó", "nosotros/nosotras": "incluimos", "vosotros/vosotras": "incluisteis", "ellos/ellas/ustedes": "incluyeron"},
@@ -1268,7 +1280,7 @@ window.verbsData = {
     "coger": {
         "group": "irregular",
         "level": 3,
-        "frequency": 91,
+        "frequency": 92,
         "translation": "брать, ловить",
         "presente": {"yo": "cojo", "tú": "coges", "él/ella/usted": "coge", "nosotros/nosotras": "cogemos", "vosotros/vosotras": "cogéis", "ellos/ellas/ustedes": "cogen"},
         "pretérito": {"yo": "cogí", "tú": "cogiste", "él/ella/usted": "cogió", "nosotros/nosotras": "cogimos", "vosotros/vosotras": "cogisteis", "ellos/ellas/ustedes": "cogieron"},
@@ -1282,7 +1294,7 @@ window.verbsData = {
     "andar": {
         "group": "irregular",
         "level": 3,
-        "frequency": 92,
+        "frequency": 93,
         "translation": "ходить",
         "presente": {"yo": "ando", "tú": "andas", "él/ella/usted": "anda", "nosotros/nosotras": "andamos", "vosotros/vosotras": "andáis", "ellos/ellas/ustedes": "andan"},
         "pretérito": {"yo": "anduve", "tú": "anduviste", "él/ella/usted": "anduvo", "nosotros/nosotras": "anduvimos", "vosotros/vosotras": "anduvisteis", "ellos/ellas/ustedes": "anduvieron"},
@@ -1296,7 +1308,7 @@ window.verbsData = {
     "caer": {
         "group": "irregular",
         "level": 3,
-        "frequency": 93,
+        "frequency": 94,
         "translation": "падать",
         "presente": {"yo": "caigo", "tú": "caes", "él/ella/usted": "cae", "nosotros/nosotras": "caemos", "vosotros/vosotras": "caéis", "ellos/ellas/ustedes": "caen"},
         "pretérito": {"yo": "caí", "tú": "caíste", "él/ella/usted": "cayó", "nosotros/nosotras": "caímos", "vosotros/vosotras": "caísteis", "ellos/ellas/ustedes": "cayeron"},
@@ -1310,7 +1322,7 @@ window.verbsData = {
     "realizar": {
         "group": "ar",
         "level": 3,
-        "frequency": 94,
+        "frequency": 95,
         "translation": "осуществлять, выполнять",
         "presente": {"yo": "realizo", "tú": "realizas", "él/ella/usted": "realiza", "nosotros/nosotras": "realizamos", "vosotros/vosotras": "realizáis", "ellos/ellas/ustedes": "realizan"},
         "pretérito": {"yo": "realicé", "tú": "realizaste", "él/ella/usted": "realizó", "nosotros/nosotras": "realizamos", "vosotros/vosotras": "realizasteis", "ellos/ellas/ustedes": "realizaron"},
@@ -1324,7 +1336,7 @@ window.verbsData = {
     "conducir": {
         "group": "irregular",
         "level": 3,
-        "frequency": 95,
+        "frequency": 96,
         "translation": "вести (машину)",
         "presente": {"yo": "conduzco", "tú": "conduces", "él/ella/usted": "conduce", "nosotros/nosotras": "conducimos", "vosotros/vosotras": "conducís", "ellos/ellas/ustedes": "conducen"},
         "pretérito": {"yo": "conduje", "tú": "condujiste", "él/ella/usted": "condujo", "nosotros/nosotras": "condujimos", "vosotros/vosotras": "condujisteis", "ellos/ellas/ustedes": "condujeron"},
@@ -1338,7 +1350,7 @@ window.verbsData = {
     "acordar": {
         "group": "irregular",
         "level": 3,
-        "frequency": 96,
+        "frequency": 97,
         "translation": "договариваться, помнить",
         "presente": {"yo": "acuerdo", "tú": "acuerdas", "él/ella/usted": "acuerda", "nosotros/nosotras": "acordamos", "vosotros/vosotras": "acordáis", "ellos/ellas/ustedes": "acuerdan"},
         "pretérito": {"yo": "acordé", "tú": "acordaste", "él/ella/usted": "acordó", "nosotros/nosotras": "acordamos", "vosotros/vosotras": "acordasteis", "ellos/ellas/ustedes": "acordaron"},
@@ -1352,7 +1364,7 @@ window.verbsData = {
     "aceptar": {
         "group": "ar",
         "level": 3,
-        "frequency": 97,
+        "frequency": 98,
         "translation": "принимать, соглашаться",
         "presente": {"yo": "acepto", "tú": "aceptas", "él/ella/usted": "acepta", "nosotros/nosotras": "aceptamos", "vosotros/vosotras": "aceptáis", "ellos/ellas/ustedes": "aceptan"},
         "pretérito": {"yo": "acepté", "tú": "aceptaste", "él/ella/usted": "aceptó", "nosotros/nosotras": "aceptamos", "vosotros/vosotras": "aceptasteis", "ellos/ellas/ustedes": "aceptaron"},
@@ -1366,7 +1378,7 @@ window.verbsData = {
     "reconocer": {
         "group": "irregular",
         "level": 3,
-        "frequency": 98,
+        "frequency": 99,
         "translation": "признавать, узнавать",
         "presente": {"yo": "reconozco", "tú": "reconoces", "él/ella/usted": "reconoce", "nosotros/nosotras": "reconocemos", "vosotros/vosotras": "reconocéis", "ellos/ellas/ustedes": "reconocen"},
         "pretérito": {"yo": "reconocí", "tú": "reconociste", "él/ella/usted": "reconoció", "nosotros/nosotras": "reconocimos", "vosotros/vosotras": "reconocisteis", "ellos/ellas/ustedes": "reconocieron"},
@@ -1380,7 +1392,7 @@ window.verbsData = {
     "imaginar": {
         "group": "ar",
         "level": 3,
-        "frequency": 99,
+        "frequency": 100,
         "translation": "воображать",
         "presente": {"yo": "imagino", "tú": "imaginas", "él/ella/usted": "imagina", "nosotros/nosotras": "imaginamos", "vosotros/vosotras": "imagináis", "ellos/ellas/ustedes": "imaginan"},
         "pretérito": {"yo": "imaginé", "tú": "imaginaste", "él/ella/usted": "imaginó", "nosotros/nosotras": "imaginamos", "vosotros/vosotras": "imaginasteis", "ellos/ellas/ustedes": "imaginaron"},
@@ -1394,7 +1406,7 @@ window.verbsData = {
     "intentar": {
         "group": "ar",
         "level": 3,
-        "frequency": 100,
+        "frequency": 101,
         "translation": "пытаться",
         "presente": {"yo": "intento", "tú": "intentas", "él/ella/usted": "intenta", "nosotros/nosotras": "intentamos", "vosotros/vosotras": "intentáis", "ellos/ellas/ustedes": "intentan"},
         "pretérito": {"yo": "intenté", "tú": "intentaste", "él/ella/usted": "intentó", "nosotros/nosotras": "intentamos", "vosotros/vosotras": "intentasteis", "ellos/ellas/ustedes": "intentaron"},
