@@ -18,6 +18,8 @@ class VerbTrainer {
         };
         this.selectedTimes = ['presente'];
         this.selectedPronouns = ['yo'];
+        this.selectedGroups = ['all'];
+        this.selectedLevels = ['all'];
         this.wrongAnswers = [];
         this.isReviewMode = false;
         
@@ -42,6 +44,14 @@ class VerbTrainer {
         this.backBtn = document.getElementById('backBtn');
         
         this.waitingForNext = false;
+        
+        // Инициализация выбранных времён и местоимений
+        this.updateSelectedTimes();
+        this.updateSelectedPronouns();
+        
+        // Инициализация выбранных групп и уровней
+        this.updateSelectedGroups();
+        this.updateSelectedLevels();
     }
     
     bindEvents() {
@@ -62,21 +72,29 @@ class VerbTrainer {
             }
         });
         
+        // Обработка чекбоксов времён (можно выбирать несколько)
         document.querySelectorAll('input[name="time"]').forEach(checkbox => {
             checkbox.addEventListener('change', () => this.updateSelectedTimes());
-            if (checkbox.checked) {
-                this.selectedTimes.push(checkbox.value);
-            }
         });
         
+        // Обработка чекбоксов местоимений (можно выбирать несколько)
         document.querySelectorAll('input[name="pronoun"]').forEach(checkbox => {
             checkbox.addEventListener('change', () => this.updateSelectedPronouns());
-            if (checkbox.checked) {
-                this.selectedPronouns.push(checkbox.value);
-            }
         });
         
-        document.querySelectorAll('input[name="time"], input[name="pronoun"]').forEach(checkbox => {
+        // Обработка чекбоксов групп (взаимоисключающие с "all")
+        document.querySelectorAll('input[name="group"]').forEach(checkbox => {
+            checkbox.addEventListener('change', (e) => this.handleGroupChange(e.target));
+        });
+        
+        // Обработка чекбоксов уровней (взаимоисключающие с "all")
+        document.querySelectorAll('input[name="level"]').forEach(checkbox => {
+            checkbox.addEventListener('change', (e) => this.handleLevelChange(e.target));
+        });
+        
+        // Обновление кнопки повтора при любом изменении настроек
+        const allCheckboxes = document.querySelectorAll('input[name="time"], input[name="pronoun"], input[name="group"], input[name="level"]');
+        allCheckboxes.forEach(checkbox => {
             checkbox.addEventListener('change', () => this.updateReviewButton());
         });
     }
@@ -84,31 +102,159 @@ class VerbTrainer {
     updateSelectedTimes() {
         this.selectedTimes = Array.from(document.querySelectorAll('input[name="time"]:checked'))
             .map(cb => cb.value);
+        
+        if (this.selectedTimes.length === 0) {
+            const firstCheckbox = document.querySelector('input[name="time"]');
+            if (firstCheckbox) {
+                firstCheckbox.checked = true;
+                this.selectedTimes = [firstCheckbox.value];
+            }
+        }
+        
         this.updateReviewButton();
     }
     
     updateSelectedPronouns() {
         this.selectedPronouns = Array.from(document.querySelectorAll('input[name="pronoun"]:checked'))
             .map(cb => cb.value);
+        
+        if (this.selectedPronouns.length === 0) {
+            const firstCheckbox = document.querySelector('input[name="pronoun"]');
+            if (firstCheckbox) {
+                firstCheckbox.checked = true;
+                this.selectedPronouns = [firstCheckbox.value];
+            }
+        }
+        
         this.updateReviewButton();
     }
     
-    updateReviewButton() {
-        if (this.wrongAnswers.length > 0) {
-            const filteredWrong = this.wrongAnswers.filter(wrong => 
-                this.selectedTimes.includes(wrong.time) && 
-                this.selectedPronouns.includes(wrong.pronoun)
-            );
-            this.reviewCountElem.textContent = filteredWrong.length;
-            
-            if (filteredWrong.length > 0) {
-                this.reviewBtn.style.display = 'flex';
+    handleGroupChange(changedCheckbox) {
+        const allCheckbox = document.querySelector('input[name="group"][value="all"]');
+        const groupCheckboxes = document.querySelectorAll('input[name="group"]:not([value="all"])');
+        
+        if (changedCheckbox.value === 'all') {
+            // Если выбрали "Все глаголы"
+            if (changedCheckbox.checked) {
+                // Снять все остальные чекбоксы
+                groupCheckboxes.forEach(cb => cb.checked = false);
+                this.selectedGroups = ['all'];
             } else {
-                this.reviewBtn.style.display = 'none';
+                // Если пытаемся снять "Все глаголы", не даем этого сделать
+                changedCheckbox.checked = true;
             }
         } else {
-            this.reviewBtn.style.display = 'none';
+            // Если выбрали конкретную группу
+            if (changedCheckbox.checked) {
+                // Снять чекбокс "Все глаголы"
+                allCheckbox.checked = false;
+                // Обновить выбранные группы
+                this.selectedGroups = Array.from(groupCheckboxes)
+                    .filter(cb => cb.checked)
+                    .map(cb => cb.value);
+            } else {
+                // Если сняли конкретную группу
+                this.selectedGroups = Array.from(groupCheckboxes)
+                    .filter(cb => cb.checked)
+                    .map(cb => cb.value);
+                
+                // Если ничего не выбрано, выбрать "Все глаголы"
+                if (this.selectedGroups.length === 0) {
+                    allCheckbox.checked = true;
+                    this.selectedGroups = ['all'];
+                }
+            }
         }
+        
+        this.updateReviewButton();
+    }
+    
+    updateSelectedGroups() {
+        const allCheckbox = document.querySelector('input[name="group"][value="all"]');
+        const groupCheckboxes = document.querySelectorAll('input[name="group"]:not([value="all"])');
+        
+        if (allCheckbox.checked) {
+            this.selectedGroups = ['all'];
+        } else {
+            this.selectedGroups = Array.from(groupCheckboxes)
+                .filter(cb => cb.checked)
+                .map(cb => cb.value);
+        }
+    }
+    
+    handleLevelChange(changedCheckbox) {
+        const allCheckbox = document.querySelector('input[name="level"][value="all"]');
+        const levelCheckboxes = document.querySelectorAll('input[name="level"]:not([value="all"])');
+        
+        if (changedCheckbox.value === 'all') {
+            // Если выбрали "Все уровни"
+            if (changedCheckbox.checked) {
+                // Снять все остальные чекбоксы
+                levelCheckboxes.forEach(cb => cb.checked = false);
+                this.selectedLevels = ['all'];
+            } else {
+                // Если пытаемся снять "Все уровни", не даем этого сделать
+                changedCheckbox.checked = true;
+            }
+        } else {
+            // Если выбрали конкретный уровень
+            if (changedCheckbox.checked) {
+                // Снять чекбокс "Все уровни"
+                allCheckbox.checked = false;
+                // Обновить выбранные уровни
+                this.selectedLevels = Array.from(levelCheckboxes)
+                    .filter(cb => cb.checked)
+                    .map(cb => cb.value);
+            } else {
+                // Если сняли конкретный уровень
+                this.selectedLevels = Array.from(levelCheckboxes)
+                    .filter(cb => cb.checked)
+                    .map(cb => cb.value);
+                
+                // Если ничего не выбрано, выбрать "Все уровни"
+                if (this.selectedLevels.length === 0) {
+                    allCheckbox.checked = true;
+                    this.selectedLevels = ['all'];
+                }
+            }
+        }
+        
+        this.updateReviewButton();
+    }
+    
+    updateSelectedLevels() {
+        const allCheckbox = document.querySelector('input[name="level"][value="all"]');
+        const levelCheckboxes = document.querySelectorAll('input[name="level"]:not([value="all"])');
+        
+        if (allCheckbox.checked) {
+            this.selectedLevels = ['all'];
+        } else {
+            this.selectedLevels = Array.from(levelCheckboxes)
+                .filter(cb => cb.checked)
+                .map(cb => cb.value);
+        }
+    }
+    
+    getFilteredVerbs() {
+        let verbs = Object.keys(this.verbs);
+        
+        // Фильтрация по группам
+        if (!this.selectedGroups.includes('all')) {
+            verbs = verbs.filter(verb => {
+                const verbGroup = this.verbs[verb].group;
+                return this.selectedGroups.includes(verbGroup);
+            });
+        }
+        
+        // Фильтрация по уровням
+        if (!this.selectedLevels.includes('all')) {
+            verbs = verbs.filter(verb => {
+                const verbLevel = this.verbs[verb].level.toString();
+                return this.selectedLevels.includes(verbLevel);
+            });
+        }
+        
+        return verbs;
     }
     
     startTraining() {
@@ -119,6 +265,12 @@ class VerbTrainer {
         
         if (this.selectedTimes.length === 0 || this.selectedPronouns.length === 0) {
             alert('Выберите хотя бы одно время и одно местоимение!');
+            return;
+        }
+        
+        const filteredVerbs = this.getFilteredVerbs();
+        if (filteredVerbs.length === 0) {
+            alert('Нет глаголов по выбранным настройкам!');
             return;
         }
         
@@ -134,10 +286,7 @@ class VerbTrainer {
             return;
         }
         
-        const filteredWrong = this.wrongAnswers.filter(wrong => 
-            this.selectedTimes.includes(wrong.time) && 
-            this.selectedPronouns.includes(wrong.pronoun)
-        );
+        const filteredWrong = this.getFilteredWrongAnswers();
         
         if (filteredWrong.length === 0) {
             alert('Нет ошибок по выбранным настройкам!');
@@ -148,9 +297,30 @@ class VerbTrainer {
         this.nextReviewExercise();
     }
     
+    getFilteredWrongAnswers() {
+        return this.wrongAnswers.filter(wrong => {
+            const verb = wrong.verb;
+            const verbData = this.verbs[verb];
+            const verbGroup = verbData.group;
+            const verbLevel = verbData.level.toString();
+            
+            const timeMatch = this.selectedTimes.includes(wrong.time);
+            const pronounMatch = this.selectedPronouns.includes(wrong.pronoun);
+            const groupMatch = this.selectedGroups.includes('all') || this.selectedGroups.includes(verbGroup);
+            const levelMatch = this.selectedLevels.includes('all') || this.selectedLevels.includes(verbLevel);
+            
+            return timeMatch && pronounMatch && groupMatch && levelMatch;
+        });
+    }
+    
     generateExercise() {
-        const verbs = Object.keys(this.verbs);
-        const verb = verbs[Math.floor(Math.random() * verbs.length)];
+        const filteredVerbs = this.getFilteredVerbs();
+        
+        if (filteredVerbs.length === 0) {
+            throw new Error('Нет глаголов по выбранным настройкам');
+        }
+        
+        const verb = filteredVerbs[Math.floor(Math.random() * filteredVerbs.length)];
         const time = this.selectedTimes[Math.floor(Math.random() * this.selectedTimes.length)];
         const pronoun = this.selectedPronouns[Math.floor(Math.random() * this.selectedPronouns.length)];
         
@@ -188,10 +358,7 @@ class VerbTrainer {
     }
     
     nextReviewExercise() {
-        const filteredWrong = this.wrongAnswers.filter(wrong => 
-            this.selectedTimes.includes(wrong.time) && 
-            this.selectedPronouns.includes(wrong.pronoun)
-        );
+        const filteredWrong = this.getFilteredWrongAnswers();
         
         if (filteredWrong.length === 0) {
             this.endReview();
@@ -206,7 +373,10 @@ class VerbTrainer {
     }
     
     displayExercise() {
-        this.currentVerbElem.textContent = this.currentExercise.verb;
+        const verb = this.currentExercise.verb;
+        const translation = this.verbs[verb].translation;
+        
+        this.currentVerbElem.textContent = `${verb} (${translation})`;
         this.currentTimeElem.textContent = this.currentExercise.time;
         this.currentPronounElem.textContent = this.currentExercise.pronoun;
         this.answerInput.value = '';
@@ -251,7 +421,7 @@ class VerbTrainer {
                 this.removeFromWrongAnswers(this.currentExercise);
             }
         } else {
-            this.feedbackElem.innerHTML = correctAnswer;
+            this.feedbackElem.innerHTML = `<strong>Правильно:</strong> ${this.currentExercise.correctAnswer}`;
             this.feedbackElem.className = 'feedback incorrect';
             this.stats.wrong++;
             
@@ -295,7 +465,7 @@ class VerbTrainer {
     }
     
     showAnswer() {
-        this.feedbackElem.innerHTML = this.currentExercise.correctAnswer;
+        this.feedbackElem.innerHTML = `<strong>Правильно:</strong> ${this.currentExercise.correctAnswer}`;
         this.feedbackElem.className = 'feedback incorrect';
         this.waitingForNext = true;
         document.getElementById('checkBtn').textContent = 'Далее';
@@ -307,6 +477,17 @@ class VerbTrainer {
         this.correctCountElem.textContent = this.stats.correct;
         this.totalCountElem.textContent = this.stats.total;
         this.wrongCountElem.textContent = this.stats.wrong;
+    }
+    
+    updateReviewButton() {
+        const filteredWrong = this.getFilteredWrongAnswers();
+        this.reviewCountElem.textContent = filteredWrong.length;
+        
+        if (filteredWrong.length > 0) {
+            this.reviewBtn.style.display = 'flex';
+        } else {
+            this.reviewBtn.style.display = 'none';
+        }
     }
     
     returnToSettings() {
@@ -330,14 +511,19 @@ class VerbTrainer {
     }
     
     saveStats() {
-        // Сохранение данных в localStorage
         const data = {
             stats: this.stats,
             wrongAnswers: this.wrongAnswers,
             selectedTimes: this.selectedTimes,
-            selectedPronouns: this.selectedPronouns
+            selectedPronouns: this.selectedPronouns,
+            selectedGroups: this.selectedGroups,
+            selectedLevels: this.selectedLevels
         };
         localStorage.setItem('verbTrainerData', JSON.stringify(data));
+    }
+    
+    saveWrongAnswers() {
+        localStorage.setItem('verbTrainerWrongAnswers', JSON.stringify(this.wrongAnswers));
     }
     
     loadStats() {
@@ -345,30 +531,67 @@ class VerbTrainer {
         if (saved) {
             try {
                 const data = JSON.parse(saved);
+                
+                // Загрузка настроек
                 this.selectedTimes = data.selectedTimes || this.selectedTimes;
                 this.selectedPronouns = data.selectedPronouns || this.selectedPronouns;
+                this.selectedGroups = data.selectedGroups || this.selectedGroups;
+                this.selectedLevels = data.selectedLevels || this.selectedLevels;
                 
+                // Загрузка статистики
+                this.stats = data.stats || this.stats;
+                this.wrongAnswers = data.wrongAnswers || this.wrongAnswers;
+                
+                // Восстановление чекбоксов времён
                 document.querySelectorAll('input[name="time"]').forEach(checkbox => {
                     checkbox.checked = this.selectedTimes.includes(checkbox.value);
                 });
                 
+                // Восстановление чекбоксов местоимений
                 document.querySelectorAll('input[name="pronoun"]').forEach(checkbox => {
                     checkbox.checked = this.selectedPronouns.includes(checkbox.value);
                 });
                 
+                // Восстановление чекбоксов групп
+                const allGroupsCheckbox = document.querySelector('input[name="group"][value="all"]');
+                const groupCheckboxes = document.querySelectorAll('input[name="group"]:not([value="all"])');
+                
+                if (this.selectedGroups.includes('all')) {
+                    allGroupsCheckbox.checked = true;
+                    groupCheckboxes.forEach(cb => cb.checked = false);
+                } else {
+                    allGroupsCheckbox.checked = false;
+                    groupCheckboxes.forEach(cb => {
+                        cb.checked = this.selectedGroups.includes(cb.value);
+                    });
+                }
+                
+                // Восстановление чекбоксов уровней
+                const allLevelsCheckbox = document.querySelector('input[name="level"][value="all"]');
+                const levelCheckboxes = document.querySelectorAll('input[name="level"]:not([value="all"])');
+                
+                if (this.selectedLevels.includes('all')) {
+                    allLevelsCheckbox.checked = true;
+                    levelCheckboxes.forEach(cb => cb.checked = false);
+                } else {
+                    allLevelsCheckbox.checked = false;
+                    levelCheckboxes.forEach(cb => {
+                        cb.checked = this.selectedLevels.includes(cb.value);
+                    });
+                }
+                
+                // Обновление интерфейса
                 this.updateStats();
                 this.updateReviewButton();
+                
             } catch (e) {
                 console.error('Ошибка загрузки сохраненных данных:', e);
             }
         }
     }
-    
-    saveWrongAnswers() {
-        localStorage.setItem('verbTrainerWrongAnswers', JSON.stringify(this.wrongAnswers));
-    }
 }
 
+// Инициализация при загрузке страницы
 document.addEventListener('DOMContentLoaded', () => {
     const trainer = new VerbTrainer();
 });
