@@ -72,24 +72,24 @@ class VerbTrainer {
             }
         });
         
-        // Обработка чекбоксов времён
+        // Обработка чекбоксов времён (можно выбирать несколько)
         document.querySelectorAll('input[name="time"]').forEach(checkbox => {
             checkbox.addEventListener('change', () => this.updateSelectedTimes());
         });
         
-        // Обработка чекбоксов местоимений
+        // Обработка чекбоксов местоимений (можно выбирать несколько)
         document.querySelectorAll('input[name="pronoun"]').forEach(checkbox => {
             checkbox.addEventListener('change', () => this.updateSelectedPronouns());
         });
         
-        // Обработка чекбоксов групп
+        // Обработка чекбоксов групп (взаимоисключающие с "all")
         document.querySelectorAll('input[name="group"]').forEach(checkbox => {
-            checkbox.addEventListener('change', () => this.handleGroupChange());
+            checkbox.addEventListener('change', (e) => this.handleGroupChange(e.target));
         });
         
-        // Обработка чекбоксов уровней
+        // Обработка чекбоксов уровней (взаимоисключающие с "all")
         document.querySelectorAll('input[name="level"]').forEach(checkbox => {
-            checkbox.addEventListener('change', () => this.handleLevelChange());
+            checkbox.addEventListener('change', (e) => this.handleLevelChange(e.target));
         });
         
         // Обновление кнопки повтора при любом изменении настроек
@@ -129,26 +129,40 @@ class VerbTrainer {
         this.updateReviewButton();
     }
     
-    handleGroupChange() {
+    handleGroupChange(changedCheckbox) {
         const allCheckbox = document.querySelector('input[name="group"][value="all"]');
         const groupCheckboxes = document.querySelectorAll('input[name="group"]:not([value="all"])');
         
-        if (allCheckbox.checked) {
-            // Если выбран "Все группы", снять все остальные
-            groupCheckboxes.forEach(cb => cb.checked = false);
-            this.selectedGroups = ['all'];
-        } else {
-            // Если выбран конкретный глагол, снять "Все группы"
-            allCheckbox.checked = false;
-            
-            this.selectedGroups = Array.from(groupCheckboxes)
-                .filter(cb => cb.checked)
-                .map(cb => cb.value);
-            
-            // Если ничего не выбрано, выбрать "Все группы"
-            if (this.selectedGroups.length === 0) {
-                allCheckbox.checked = true;
+        if (changedCheckbox.value === 'all') {
+            // Если выбрали "Все глаголы"
+            if (changedCheckbox.checked) {
+                // Снять все остальные чекбоксы
+                groupCheckboxes.forEach(cb => cb.checked = false);
                 this.selectedGroups = ['all'];
+            } else {
+                // Если пытаемся снять "Все глаголы", не даем этого сделать
+                changedCheckbox.checked = true;
+            }
+        } else {
+            // Если выбрали конкретную группу
+            if (changedCheckbox.checked) {
+                // Снять чекбокс "Все глаголы"
+                allCheckbox.checked = false;
+                // Обновить выбранные группы
+                this.selectedGroups = Array.from(groupCheckboxes)
+                    .filter(cb => cb.checked)
+                    .map(cb => cb.value);
+            } else {
+                // Если сняли конкретную группу
+                this.selectedGroups = Array.from(groupCheckboxes)
+                    .filter(cb => cb.checked)
+                    .map(cb => cb.value);
+                
+                // Если ничего не выбрано, выбрать "Все глаголы"
+                if (this.selectedGroups.length === 0) {
+                    allCheckbox.checked = true;
+                    this.selectedGroups = ['all'];
+                }
             }
         }
         
@@ -168,26 +182,40 @@ class VerbTrainer {
         }
     }
     
-    handleLevelChange() {
+    handleLevelChange(changedCheckbox) {
         const allCheckbox = document.querySelector('input[name="level"][value="all"]');
         const levelCheckboxes = document.querySelectorAll('input[name="level"]:not([value="all"])');
         
-        if (allCheckbox.checked) {
-            // Если выбран "Все уровни", снять все остальные
-            levelCheckboxes.forEach(cb => cb.checked = false);
-            this.selectedLevels = ['all'];
-        } else {
-            // Если выбран конкретный уровень, снять "Все уровни"
-            allCheckbox.checked = false;
-            
-            this.selectedLevels = Array.from(levelCheckboxes)
-                .filter(cb => cb.checked)
-                .map(cb => cb.value);
-            
-            // Если ничего не выбрано, выбрать "Все уровни"
-            if (this.selectedLevels.length === 0) {
-                allCheckbox.checked = true;
+        if (changedCheckbox.value === 'all') {
+            // Если выбрали "Все уровни"
+            if (changedCheckbox.checked) {
+                // Снять все остальные чекбоксы
+                levelCheckboxes.forEach(cb => cb.checked = false);
                 this.selectedLevels = ['all'];
+            } else {
+                // Если пытаемся снять "Все уровни", не даем этого сделать
+                changedCheckbox.checked = true;
+            }
+        } else {
+            // Если выбрали конкретный уровень
+            if (changedCheckbox.checked) {
+                // Снять чекбокс "Все уровни"
+                allCheckbox.checked = false;
+                // Обновить выбранные уровни
+                this.selectedLevels = Array.from(levelCheckboxes)
+                    .filter(cb => cb.checked)
+                    .map(cb => cb.value);
+            } else {
+                // Если сняли конкретный уровень
+                this.selectedLevels = Array.from(levelCheckboxes)
+                    .filter(cb => cb.checked)
+                    .map(cb => cb.value);
+                
+                // Если ничего не выбрано, выбрать "Все уровни"
+                if (this.selectedLevels.length === 0) {
+                    allCheckbox.checked = true;
+                    this.selectedLevels = ['all'];
+                }
             }
         }
         
@@ -525,22 +553,32 @@ class VerbTrainer {
                 });
                 
                 // Восстановление чекбоксов групп
-                document.querySelectorAll('input[name="group"]').forEach(checkbox => {
-                    if (checkbox.value === 'all') {
-                        checkbox.checked = this.selectedGroups.includes('all');
-                    } else {
-                        checkbox.checked = this.selectedGroups.includes(checkbox.value);
-                    }
-                });
+                const allGroupsCheckbox = document.querySelector('input[name="group"][value="all"]');
+                const groupCheckboxes = document.querySelectorAll('input[name="group"]:not([value="all"])');
+                
+                if (this.selectedGroups.includes('all')) {
+                    allGroupsCheckbox.checked = true;
+                    groupCheckboxes.forEach(cb => cb.checked = false);
+                } else {
+                    allGroupsCheckbox.checked = false;
+                    groupCheckboxes.forEach(cb => {
+                        cb.checked = this.selectedGroups.includes(cb.value);
+                    });
+                }
                 
                 // Восстановление чекбоксов уровней
-                document.querySelectorAll('input[name="level"]').forEach(checkbox => {
-                    if (checkbox.value === 'all') {
-                        checkbox.checked = this.selectedLevels.includes('all');
-                    } else {
-                        checkbox.checked = this.selectedLevels.includes(checkbox.value);
-                    }
-                });
+                const allLevelsCheckbox = document.querySelector('input[name="level"][value="all"]');
+                const levelCheckboxes = document.querySelectorAll('input[name="level"]:not([value="all"])');
+                
+                if (this.selectedLevels.includes('all')) {
+                    allLevelsCheckbox.checked = true;
+                    levelCheckboxes.forEach(cb => cb.checked = false);
+                } else {
+                    allLevelsCheckbox.checked = false;
+                    levelCheckboxes.forEach(cb => {
+                        cb.checked = this.selectedLevels.includes(cb.value);
+                    });
+                }
                 
                 // Обновление интерфейса
                 this.updateStats();
