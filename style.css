@@ -385,3 +385,46 @@ h1 {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+.level-settings {
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 6px;
+    border: 1px solid #e9ecef;
+}
+
+.level-settings label:first-child {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #495057;
+    font-size: 0.95em;
+}
+
+.level-description {
+    font-size: 0.85em;
+    color: #6c757d;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.level-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    font-size: 0.8em;
+    color: #6c757d;
+}
+
+/* Для мобильных */
+@media (max-width: 600px) {
+    .checkbox-group[data-group="level"] {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .level-info {
+        flex-direction: column;
+        gap: 2px;
+    }
+}
